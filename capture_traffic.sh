@@ -3,5 +3,5 @@
 # Input each line to the modules
 while read line; do
 	# File disclosure
-	sh ./modules/file_disclosure/script.sh "$line"
+	echo "$line" | sh ./modules/file_disclosure/script.sh
 done
