@@ -1,3 +1,5 @@
+from anytree.exporter import DotExporter
+from anytree import Node, RenderTree
 import json
 import re
 import networkx as nx
@@ -7,6 +9,7 @@ import matplotlib.pyplot as plt
 log_file = 'fs_logs'
 G = nx.Graph()
 data_dict={}
+site_root = 'https://blog.pseudot.org'
 
 class LogEntry:
     def __init__(self, ip_address, date_time, request_method, url, http_version, response_code, response_size, referer, user_agent):
@@ -25,6 +28,7 @@ def parse_lines(log_file):
 #log_format  main  '$remote_addr - $remote_user [$time_local] "$request"
             #'$status $body_bytes_sent "$http_referer" '
             #'"$http_user_agent" "$http_x_forwarded_for"'
+    data_dict={}
     f = open(log_file)
     for log_entry in f.readlines():
         fields = log_entry.split(' ')
@@ -48,17 +52,25 @@ def parse_lines(log_file):
         else:
             if log_entry.url not in data_dict[log_entry.referer]:
                 data_dict[log_entry.referer].append(log_entry.url)
+    return data_dict
 
-    #print(f'{log_entry.url} - {log_entry.referer}')
-    #print(log_entry.url)
-    #print(log_entry.referer)
-    #print(log_entry.ip_address)
-    #print(log_entry.date_time)
-    #print(log_entry.request_method)
-    #print(log_entry.http_version)
-    #print(log_entry.response_code)
-    #print(log_entry.response_size)
-    #print(log_entry.user_agent)
+def create_tree(data_dict):
+    root = Node("/")
 
-parse_lines(log_file)
-print(json.dumps(data_dict,indent=4))
+    for key in data_dict.keys():
+        #key = key.replace(site_noderoot,"")
+        print(key)
+        node = Node(key,parent=root)
+        for resource in data_dict[key]:
+            print(resource)
+            leaf = Node(resource,parent=node)
+
+    for pre, fill, node in RenderTree(root):
+        print("%s%s" % (pre, node.name))
+
+
+data_dict = parse_lines(log_file)
+#print(json.dumps(data_dict,indent=4))
+create_tree(data_dict)
+
+#DotExporter(udo).to_picture("udo.png")

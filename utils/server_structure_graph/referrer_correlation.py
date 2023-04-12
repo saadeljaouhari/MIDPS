@@ -1,3 +1,5 @@
+from anytree.exporter import DotExporter
+from anytree import Node, RenderTree
 import json
 
 log_file = 'test_logs'
@@ -26,5 +28,27 @@ def correlate(log_file):
 
         line_no = line_no + 1
 
-correlate(log_file)
-print(json.dumps(data_dict,indent=4))
+    return data_dict
+
+def create_tree(data_dict):
+    root = Node("/")
+
+    for key in data_dict.keys():
+        #key = key.replace(site_noderoot,"")
+        print(key)
+        node = Node(key,parent=root)
+        for resource in data_dict[key]:
+            print(resource)
+            leaf = Node(resource,parent=node)
+
+    for pre, fill, node in RenderTree(root):
+        print("%s%s" % (pre, node.name))
+
+    #DotExporter(root).to_picture("udo.png")
+
+def search_key(key):
+    pass
+
+#print(json.dumps(data_dict,indent=4))
+data_dict = correlate(log_file)
+create_tree(data_dict)
