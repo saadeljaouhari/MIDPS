@@ -1,3 +1,4 @@
+from anytree.exporter import JsonExporter
 from anytree.exporter import DotExporter
 from anytree import Node, RenderTree
 import json
@@ -35,20 +36,25 @@ def create_tree(data_dict):
 
     for key in data_dict.keys():
         #key = key.replace(site_noderoot,"")
-        print(key)
         node = Node(key,parent=root)
         for resource in data_dict[key]:
-            print(resource)
             leaf = Node(resource,parent=node)
 
-    for pre, fill, node in RenderTree(root):
-        print("%s%s" % (pre, node.name))
+    return root
 
     #DotExporter(root).to_picture("udo.png")
 
-def search_key(key):
-    pass
+def export_tree(tree,file_name):
+
+    exporter = JsonExporter(indent=4, sort_keys=True)
+    json_tree = exporter.export(tree)
+
+    with open(file_name, 'w') as f:
+        f.write(json_tree)
+
 
 #print(json.dumps(data_dict,indent=4))
 data_dict = correlate(log_file)
-create_tree(data_dict)
+tree = create_tree(data_dict)
+
+export_tree(tree,'web_structure_tree')
