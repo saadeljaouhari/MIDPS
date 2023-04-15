@@ -1,10 +1,11 @@
+import sys
 from anytree.search import findall
 from anytree.importer import JsonImporter
 from anytree.exporter import DotExporter
 from anytree import Node, RenderTree
 import json
 
-file_name = "web_structure_tree"
+file_name = "modules/file_disclosure/web_structure_tree"
 
 def load_tree(file_name):
     f = open(file_name,"r")
@@ -13,8 +14,11 @@ def load_tree(file_name):
     tree = importer.import_(data)
     return tree
 
+if __name__=="__main__":
+    tree = load_tree(file_name)
+    for line in sys.stdin:
 
-tree = load_tree(file_name)
-#print(RenderTree(tree))
-print(findall(tree, filter_=lambda node: node.name == "/posts/botosani/style.css"))
-print(findall(tree, filter_=lambda node: node.name == "/posts/bot0sani/style.css"))
+        resource = line.split(' ')[0]
+        referrer = line.split(' ')[1]
+
+        print(findall(tree, filter_=lambda node: node.name == resource))

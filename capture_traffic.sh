@@ -4,4 +4,7 @@
 while read line; do
 	# File disclosure
 	echo "$line" | sh ./modules/file_disclosure/script.sh
+
+	# test
+	echo "$line" | sh ./modules/ddos/script.sh
 done
