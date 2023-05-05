@@ -1,0 +1,103 @@
+html,body
+{
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(#990000,black) fixed;
+
+}
+
+.motto{
+    font-style: italic;
+    text-transform: lowercase;
+    color: #fff;
+    margin-bottom: 10%;
+    margin-right: 2%;
+    text-align: right;
+    font-size: 90%;
+}
+p {
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+}
+
+h3 {
+    color: #6a83c7;
+    font-size: 95%;
+    font-family: Trebuchet, Georgia, serif;
+}
+
+a {
+    color: #d2d2c7;
+    text-decoration: underline;
+}
+
+
+.title {
+    color: #fff;
+    padding-left: 2%;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.network {
+    font: 90% "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    align-items: flex-start;
+
+}
+
+.articles {
+
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 1200px;
+    margin-top: 5px;
+    color: #f4f4f4;
+}
+.article:nth-child(n+2){
+    margin-top: 10%;
+}
+
+.subtitle{
+
+    border-bottom: 1px #5e5e5e solid;
+}
+
+.network li {
+    list-style-type: none;
+    border-bottom: 1px dotted #fff;
+    background-color: #46516e;
+    margin-top: 2px;
+}
+
+.network li a {
+    display: block;
+    text-decoration: none;
+    min-height: 1.5em;
+    padding: 0 10px 0 40px;
+    border: none;
+    color: rgb(255, 255, 255);
+}
+
+.network li a:hover{
+
+    background-color: #ffffff;
+}
+.network li a:hover{
+
+    color: rgb(0, 0, 0);
+}
+
+.archive{
+    color: #6a83c7;
+    font-family: Trebuchet, Georgia, serif;
+}
+.recent {
+
+    color: #fff;
+    margin-right: 3%;
+}

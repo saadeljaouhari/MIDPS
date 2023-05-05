@@ -1,0 +1,85 @@
+html {
+	background: linear-gradient(darkcyan,black) fixed;
+
+}
+html,body{
+	margin: 0;
+	height: 100%;
+}
+#title{
+	color:#4DE1FF;
+}
+h1{ text-align: center ;
+	font-size: 5em;
+}
+.motto{ text-align: end ;
+	font-style: italic;
+	margin-bottom: 10%;
+
+	color:#FFFFFF;
+
+}
+
+.layout{
+	display: flex;
+	justify-content: center;
+	text-align: start;
+	margin: 0 auto;
+	align-content: space-between;
+	font-size: 1.2em;
+	flex-wrap: wrap;
+}
+.network{
+	color:yellowgreen;
+	padding: 1%;
+	align-items: flex-start;
+	text-align:end;
+	font-weight: bold;
+}
+a.links{
+	text-decoration: none;
+	color:#CCB3FF;
+}
+
+a.links:hover{
+	text-decoration: none;
+	color:hotpink;
+}
+
+a.links:visited{
+	text-decoration: none;
+	color:hotpink;
+}
+.recent{
+	font-style: italic;
+	padding: 4%;
+	border: 2px dashed black;
+	border-radius: 5px;
+	font-weight: bold;
+	margin:auto;
+}
+.buttons{
+
+	display: flex;
+	padding-top:20%;
+	justify-content: center;
+}
+.button{
+	bottom:1em;
+	margin: 2px;
+}
+
+ul{
+	list-style: none;
+
+}
+
+.entry {
+	border-left: 10px solid darkslategray;
+	padding: 0px 10px 0px 10px;
+	border-radius: 0 30px 30px 0;
+	margin-bottom: 20px;
+	color: #e6fffa;
+	}
+
+.entry h2 { margin: 5px auto 2px auto; }
