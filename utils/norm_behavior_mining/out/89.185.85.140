@@ -1,0 +1,5 @@
+89.185.85.140 - - [07/May/2023:05:38:33 +0000] "GET / HTTP/1.1" 200 2023 "-" "Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1"
+89.185.85.140 - - [07/May/2023:05:38:35 +0000] "GET /images/favicon.ico HTTP/1.1" 200 177942 "https://drawing.pseudot.org/" "Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1"
+89.185.85.140 - - [07/May/2023:05:38:36 +0000] "GET /style.css HTTP/1.1" 200 2223 "https://drawing.pseudot.org/" "Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1"
+89.185.85.140 - - [07/May/2023:05:38:37 +0000] "GET /images/IMG_9009.JPG HTTP/1.1" 200 90743 "https://drawing.pseudot.org/" "Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1"
+89.185.85.140 - - [07/May/2023:05:38:37 +0000] "GET /scripts/zooming.min.js HTTP/1.1" 200 10728 "https://drawing.pseudot.org/" "Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1"

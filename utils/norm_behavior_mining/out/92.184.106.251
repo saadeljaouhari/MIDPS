@@ -1,0 +1,4 @@
+92.184.106.251 - - [06/May/2023:16:03:29 +0000] "GET /interface-data/init?1683389000507 HTTP/1.1" 200 8135 "http://208.76.222.31/" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1"
+92.184.106.251 - - [06/May/2023:16:03:41 +0000] "GET /apple-touch-icon.png HTTP/1.1" 200 15195 "-" "com.apple.WebKit.Networking/8614.2.9.0.10 CFNetwork/1399 Darwin/22.1.0"
+92.184.106.251 - - [06/May/2023:16:03:41 +0000] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 0 "-" "com.apple.WebKit.Networking/8614.2.9.0.10 CFNetwork/1399 Darwin/22.1.0"
+92.184.106.251 - - [06/May/2023:16:03:41 +0000] "GET /favicon.ico HTTP/1.1" 404 0 "-" "com.apple.WebKit.Networking/8614.2.9.0.10 CFNetwork/1399 Darwin/22.1.0"

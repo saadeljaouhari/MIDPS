@@ -1,3 +1,5 @@
 #!/bin/sh
 
-echo "hey"
+while read line; do
+	echo $line
+done

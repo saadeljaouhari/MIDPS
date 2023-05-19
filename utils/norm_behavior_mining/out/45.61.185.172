@@ -1,0 +1,5 @@
+45.61.185.172 - - [06/May/2023:00:56:29 +0000] "GET / HTTP/1.1" 200 4567 "-" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.23) Gecko/20090825 SeaMonkey/1.1.18"
+45.61.185.172 - - [06/May/2023:00:56:30 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://music.pseudot.org/" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.23) Gecko/20090825 SeaMonkey/1.1.18"
+45.61.185.172 - - [06/May/2023:00:57:58 +0000] "GET /posts/rebonjour/rebonjour.html HTTP/1.1" 200 3930 "-" "Mozilla/5.0 (X11; U; OpenBSD i386; en-US) AppleWebKit/533.3 (KHTML like Gecko) Chrome/5.0.359.0 Safari/533.3"
+45.61.185.172 - - [06/May/2023:00:59:28 +0000] "GET /posts/pseudopost-6/pseudopost-6.html HTTP/1.1" 200 3343 "-" "Mozilla/5.0 (X11; U; Linux ppc; en-US; rv:1.8.1.13) Gecko/20080313 Iceape/1.1.9 (Debian-1.1.9-5)"
+45.61.185.172 - - [06/May/2023:00:59:30 +0000] "GET /posts/pseudopost-6/images/perna.jpeg HTTP/1.1" 200 175249 "https://blog.pseudot.org/posts/pseudopost-6/pseudopost-6.html" "Mozilla/5.0 (X11; U; Linux ppc; en-US; rv:1.8.1.13) Gecko/20080313 Iceape/1.1.9 (Debian-1.1.9-5)"

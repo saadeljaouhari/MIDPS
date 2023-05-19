@@ -1,6 +1,10 @@
 utils/data_mining/venv/
 utils/datasets/
 utils/dataset_preprocessing/
+utils/data_mining/processed_datasets/
+utils/data_mining/test/
+utils/data_mining/tmp/
+
 
 !utils/dataset_preprocessing/script.sh
 utils/normal_data_traffic_gen/acces_logs

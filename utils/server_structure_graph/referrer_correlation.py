@@ -42,7 +42,6 @@ def create_tree(data_dict):
 
     return root
 
-    #DotExporter(root).to_picture("udo.png")
 
 def export_tree(tree,file_name):
 
@@ -57,4 +56,5 @@ def export_tree(tree,file_name):
 data_dict = correlate(log_file)
 tree = create_tree(data_dict)
 
-export_tree(tree,'web_structure_tree')
+DotExporter(tree).to_picture("udo2.png")
+#export_tree(tree,'web_structure_tree')

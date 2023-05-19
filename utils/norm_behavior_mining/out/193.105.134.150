@@ -1,0 +1,2 @@
+193.105.134.150 - - [05/May/2023:19:36:58 +0000] "GET / HTTP/1.1" 200 2310 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-GB; rv:1.9.0.11) Gecko/2009060215 Firefox/3.0.11 (.NET CLR 3.5.30729)"
+193.105.134.150 - - [05/May/2023:19:36:58 +0000] "GET /style.css HTTP/1.1" 200 1653 "https://programming.pseudot.org/" "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-GB; rv:1.9.0.11) Gecko/2009060215 Firefox/3.0.11 (.NET CLR 3.5.30729)"

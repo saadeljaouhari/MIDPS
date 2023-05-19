@@ -1,0 +1,2 @@
+104.244.73.136 - - [06/May/2023:17:17:33 +0000] "GET / HTTP/1.1" 200 2310 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-GB; rv:1.9.1.17) Gecko/20110123 (like Firefox/3.x) SeaMonkey/2.0.12"
+104.244.73.136 - - [06/May/2023:17:17:33 +0000] "GET /style.css HTTP/1.1" 200 1653 "https://programming.pseudot.org/" "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-GB; rv:1.9.1.17) Gecko/20110123 (like Firefox/3.x) SeaMonkey/2.0.12"

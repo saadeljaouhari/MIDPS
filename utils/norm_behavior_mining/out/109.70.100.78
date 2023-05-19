@@ -1,0 +1,5 @@
+109.70.100.78 - - [07/May/2023:21:37:26 +0000] "GET / HTTP/1.1" 200 2023 "-" "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.5) Gecko/20091107 Firefox/3.5.5"
+109.70.100.78 - - [07/May/2023:21:37:27 +0000] "GET /images/favicon.ico HTTP/1.1" 200 177942 "https://drawing.pseudot.org/" "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.5) Gecko/20091107 Firefox/3.5.5"
+109.70.100.78 - - [07/May/2023:21:37:28 +0000] "GET /style.css HTTP/1.1" 200 2223 "https://drawing.pseudot.org/" "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.5) Gecko/20091107 Firefox/3.5.5"
+109.70.100.78 - - [07/May/2023:21:37:29 +0000] "GET /images/IMG_9009.JPG HTTP/1.1" 200 90743 "https://drawing.pseudot.org/" "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.5) Gecko/20091107 Firefox/3.5.5"
+109.70.100.78 - - [07/May/2023:21:37:29 +0000] "GET /scripts/zooming.min.js HTTP/1.1" 200 10728 "https://drawing.pseudot.org/" "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.5) Gecko/20091107 Firefox/3.5.5"

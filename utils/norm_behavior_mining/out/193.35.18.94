@@ -1,0 +1,2 @@
+193.35.18.94 - - [05/May/2023:21:46:24 +0000] "GET / HTTP/1.1" 200 5190 "-" "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.2 (KHTML like Gecko) Chrome/15.0.874.120 Safari/535.2"
+193.35.18.94 - - [05/May/2023:21:46:25 +0000] "GET /style.css HTTP/1.1" 200 1618 "https://blog.pseudot.org/" "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.2 (KHTML like Gecko) Chrome/15.0.874.120 Safari/535.2"

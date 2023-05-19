@@ -1,0 +1,3 @@
+109.70.100.14 - - [08/May/2023:09:26:26 +0000] "GET /posts/exerci%C8%9Biu-de-scriere-0/exerci%C8%9Biu-de-scriere-0.html HTTP/1.1" 200 3557 "-" "Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"
+109.70.100.14 - - [08/May/2023:09:28:08 +0000] "GET / HTTP/1.1" 200 4567 "-" "Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"
+109.70.100.14 - - [08/May/2023:09:28:08 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://music.pseudot.org/" "Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"
