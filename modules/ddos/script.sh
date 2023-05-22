@@ -4,7 +4,7 @@ tmp_log_path="/tmp/logs"
 tmp_ip_path="/tmp/ip_list"
 tmp_folder_path="/tmp/out"
 # ddos scan logs threshold
-threshold=10
+threshold=1000
 
 while read line; do
 	# append the new line to the analysis set
