@@ -1,5 +1,7 @@
 #!/bin/sh
 
+tmp_log_path="/tmp/logs"
+rm $tmp_log_path
 # Input each line to the modules
 while read line; do
 	# File disclosure
