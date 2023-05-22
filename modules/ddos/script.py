@@ -18,7 +18,7 @@ def compute_access_sequences(file_path):
     access_sequence = []
 
     # time threshold
-    delta_time = 3
+    delta_time = 10
 
     f = open(file_path,'r')
 
