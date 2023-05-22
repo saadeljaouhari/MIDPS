@@ -11,7 +11,7 @@ while read line; do
 	echo $line >> $tmp_log_path
 	line_count=$(wc -l < $tmp_log_path)
 	# if the threshold has been reached
-	if [[ $line_count -eq $threshold ]]; then
+	if [ $line_count -eq $threshold ]; then
 	#perform previous cleanup if needed
 	rm $tmp_ip_path
 	rm -rf $tmp_folder_path

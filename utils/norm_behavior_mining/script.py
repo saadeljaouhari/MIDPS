@@ -13,7 +13,7 @@ def compute_access_pattern(data_path):
 
     for file_path in os.listdir(data_path):
         ip_address = file_path
-        file_path = f'{data_path}/{file_path}'
+        file_path = '{}/{}'.format(data_path, file_path)
 
 
         f = open(file_path,'r')
@@ -54,7 +54,7 @@ def compute_access_pattern(data_path):
                 method = data[5]
                 resource = data[6]
                 answer = data[8]
-                access_sequence.append(f'{timestamp2} {method} {resource} {answer}')
+                access_sequence.append("{} {} {} {}".format(timestamp2, method, resource, answer))
 
             else:
                 log_parts = t0.split(' ')

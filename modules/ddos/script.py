@@ -50,7 +50,7 @@ def compute_access_sequences(file_path):
             method = data[5]
             resource = data[6]
             answer = data[8]
-            access_sequence.append(f'{timestamp2} {method} {resource} {answer}')
+            access_sequence.append("{} {} {} {}".format(timestamp2, method, resource, answer))
 
         else:
             print("aici")
@@ -91,7 +91,7 @@ def detect_dos(access_sequence):
 if __name__=="__main__":
 
     for file_name in os.listdir(tmp_folder_path):
-        file_path = f'{tmp_folder_path}/{file_name}'
+        file_path = '{}/{}'.format(tmp_folder_path, file_name)
         access_sequences=compute_access_sequences(file_path)
         for key in access_sequences.keys():
             verdict = detect_dos(access_sequences[key])
