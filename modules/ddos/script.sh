@@ -23,7 +23,7 @@ while read line; do
     		grep -w $ip_addr $tmp_log_path | sort -t ' ' -k 4.5,4.7M > $tmp_folder_path/$ip_addr
 	done < $tmp_ip_path
 	# scan the generated data for ddos attacks
-	python modules/ddos/script.py
+	python3 modules/ddos/script.py
 	echo -n > $tmp_log_path
 	fi
 done
