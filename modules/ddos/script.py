@@ -53,7 +53,6 @@ def compute_access_sequences(file_path):
             access_sequence.append("{} {} {} {}".format(timestamp2, method, resource, answer))
 
         else:
-            print("aici")
             log_parts = t0.split(' ')
             address= log_parts[0]
             if address in access_sequences.keys():
@@ -98,4 +97,4 @@ if __name__=="__main__":
             if verdict == 0:
                 print("Normal usage")
             else:
-                print(f'{key} - Likely DDOS')
+                print('{} - Likely DDOS'.format(key))
