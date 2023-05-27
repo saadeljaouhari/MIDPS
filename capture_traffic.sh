@@ -1,9 +1,24 @@
 #!/bin/sh
 
 tmp_log_path="/tmp/logs"
-rm $tmp_log_path
+cleanup() {
+  echo "Cleaning up..."
+  if [[ -n $background_pid ]]; then
+    kill "$background_pid"
+  fi
+
+  rm $tmp_log_path
+
+  exit 0
+}
+
+trap cleanup INT
+
 # Periodically run the crawling agent
-sh ./utils/crawling_agent/run_crawling_agent.sh
+sh ./utils/crawling_agent/run_crawling_agent.sh &
+
+background_pid=$!
+
 # Input each line to the modules
 while read line; do
 	# File disclosure

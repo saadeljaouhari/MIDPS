@@ -1,5 +1,5 @@
 #!/bin/sh
 
 while IFS= read -r link; do
-  wget --spider -r -p -nd $link
-done < web_pages
+  wget -q --spider -r -p -nd $link
+done < utils/crawling_agent/web_pages
