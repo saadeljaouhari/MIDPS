@@ -3,7 +3,7 @@ from anytree.exporter import DotExporter
 from anytree import Node, RenderTree
 import json
 
-log_file = 'test_logs'
+log_file = 'parsed_site_data'
 data_dict={}
 
 def correlate(log_file):
@@ -57,4 +57,4 @@ data_dict = correlate(log_file)
 tree = create_tree(data_dict)
 
 DotExporter(tree).to_picture("udo2.png")
-#export_tree(tree,'web_structure_tree')
+export_tree(tree,'web_structure_tree')

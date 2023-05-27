@@ -5,13 +5,14 @@ from anytree.exporter import DotExporter
 from anytree import Node, RenderTree
 import json
 
-file_name = "modules/file_disclosure/web_structure_tree"
+file_name = "web_structure_tree"
 
 def load_tree(file_name):
     f = open(file_name,"r")
-    data = json.load(f)
+    data = f.read()
     importer = JsonImporter()
     tree = importer.import_(data)
+
     return tree
 
 if __name__=="__main__":
