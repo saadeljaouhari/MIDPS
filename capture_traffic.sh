@@ -3,7 +3,7 @@
 tmp_log_path="/tmp/logs"
 cleanup() {
   echo "Cleaning up..."
-  if [[ -n $background_pid ]]; then
+  if [ -n $background_pid ]; then
     kill "$background_pid"
   fi
 
