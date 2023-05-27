@@ -3,6 +3,46 @@
         {
             "children": [
                 {
+                    "name": "/"
+                }
+            ],
+            "name": "-"
+        },
+        {
+            "children": [
+                {
+                    "name": "/CSS/style.css"
+                },
+                {
+                    "name": "/IMAGES/2019.gif"
+                },
+                {
+                    "name": "/IMAGES/firefox3.gif"
+                },
+                {
+                    "name": "/IMAGES/gnubanner.gif"
+                },
+                {
+                    "name": "/IMAGES/nokia64.gif"
+                },
+                {
+                    "name": "/IMAGES/pepsi.gif"
+                },
+                {
+                    "name": "/IMAGES/vi.gif"
+                }
+            ],
+            "name": "https://pseudot.org/"
+        },
+        {
+            "children": [
+                {
+                    "name": "/favicon/favicon.ico"
+                },
+                {
+                    "name": "/"
+                },
+                {
                     "name": "/posts/another-daria-thing/another-daria-thing.html"
                 },
                 {
@@ -13,12 +53,18 @@
                 },
                 {
                     "name": "/posts/when-does-a-passion-become-obsession/when-does-a-passion-become-obsession.html"
+                },
+                {
+                    "name": "/style.css"
                 }
             ],
             "name": "https://uc.pseudot.org/"
         },
         {
             "children": [
+                {
+                    "name": "/"
+                },
                 {
                     "name": "/posts/are-you-the-lead-in-your-story/are-you-the-lead-in-your-story.html"
                 },
@@ -60,9 +106,132 @@
                 },
                 {
                     "name": "/posts/vaslui/vaslui.html"
+                },
+                {
+                    "name": "/style.css"
                 }
             ],
             "name": "https://blog.pseudot.org/"
+        },
+        {
+            "children": [
+                {
+                    "name": "/"
+                },
+                {
+                    "name": "/posts/De%20grandes%20esperances/grandesperances.html"
+                },
+                {
+                    "name": "/posts/moby-dick-herman-melville/moby-dick-herman-melville.html"
+                },
+                {
+                    "name": "/style.css"
+                }
+            ],
+            "name": "https://books.pseudot.org/"
+        },
+        {
+            "children": [
+                {
+                    "name": "/"
+                },
+                {
+                    "name": "/images/favicon.ico"
+                },
+                {
+                    "name": "/scripts/zooming.min.js"
+                },
+                {
+                    "name": "/style.css"
+                }
+            ],
+            "name": "https://drawing.pseudot.org/"
+        },
+        {
+            "children": [
+                {
+                    "name": "/"
+                },
+                {
+                    "name": "/scripts/zooming.min.js"
+                },
+                {
+                    "name": "/style.css"
+                }
+            ],
+            "name": "https://memes.pseudot.org/"
+        },
+        {
+            "children": [
+                {
+                    "name": "/"
+                },
+                {
+                    "name": "/style.css"
+                }
+            ],
+            "name": "https://music.pseudot.org/"
+        },
+        {
+            "children": [
+                {
+                    "name": "/"
+                },
+                {
+                    "name": "/images/abandonata.jpg"
+                },
+                {
+                    "name": "/images/blexer.jpg"
+                },
+                {
+                    "name": "/images/flatterre.jpg"
+                },
+                {
+                    "name": "/images/IMG_9355.JPG"
+                },
+                {
+                    "name": "/images/mareamoldovei.jpg"
+                },
+                {
+                    "name": "/images/pacu.jpg"
+                },
+                {
+                    "name": "/images/patrie.jpg"
+                },
+                {
+                    "name": "/images/sotm.jpg"
+                },
+                {
+                    "name": "/images/store.jpg"
+                },
+                {
+                    "name": "/scripts/zooming.min.js"
+                },
+                {
+                    "name": "/style.css"
+                }
+            ],
+            "name": "https://photos.pseudot.org/"
+        },
+        {
+            "children": [
+                {
+                    "name": "/"
+                },
+                {
+                    "name": "/posts/how-does-a-markdown-compiler-work-coming-out-soon/how-does-a-markdown-compiler-work-coming-out-soon.html"
+                },
+                {
+                    "name": "/posts/inmultire-de-matrici-folosind-map-reduce/inmultire-de-matrici-folosind-map-reduce.html"
+                },
+                {
+                    "name": "/posts/music-logging-using-mpc/music-logging-using-mpc.html"
+                },
+                {
+                    "name": "/style.css"
+                }
+            ],
+            "name": "https://programming.pseudot.org/"
         },
         {
             "children": [
@@ -131,17 +300,6 @@
         {
             "children": [
                 {
-                    "name": "/posts/De%20grandes%20esperances/grandesperances.html"
-                },
-                {
-                    "name": "/posts/moby-dick-herman-melville/moby-dick-herman-melville.html"
-                }
-            ],
-            "name": "https://books.pseudot.org/"
-        },
-        {
-            "children": [
-                {
                     "name": "/posts/De%20grandes%20esperances/posts%20materials/cover.jpg"
                 },
                 {
@@ -149,20 +307,6 @@
                 }
             ],
             "name": "https://books.pseudot.org/posts/De%20grandes%20esperances/grandesperances.html"
-        },
-        {
-            "children": [
-                {
-                    "name": "/posts/how-does-a-markdown-compiler-work-coming-out-soon/how-does-a-markdown-compiler-work-coming-out-soon.html"
-                },
-                {
-                    "name": "/posts/inmultire-de-matrici-folosind-map-reduce/inmultire-de-matrici-folosind-map-reduce.html"
-                },
-                {
-                    "name": "/posts/music-logging-using-mpc/music-logging-using-mpc.html"
-                }
-            ],
-            "name": "https://programming.pseudot.org/"
         },
         {
             "children": [
