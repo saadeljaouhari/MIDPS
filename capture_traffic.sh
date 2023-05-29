@@ -1,6 +1,7 @@
 #!/bin/sh
 
 tmp_log_path="/tmp/logs"
+venv_path="venv"
 
 launch_agents() {
   echo "Launching crawling agents"
@@ -30,6 +31,10 @@ cleanup() {
 
   exit 0
 }
+
+if [ -d $venv_path ]; then
+	source "$venv_path/bin/activate"
+fi
 
 trap cleanup INT
 
