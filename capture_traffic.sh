@@ -32,11 +32,6 @@ cleanup() {
   exit 0
 }
 
-if [ -d $venv_path ]; then
-	source "$venv_path/bin/activate"
-	pip3 install -r requirements.txt
-fi
-
 trap cleanup INT
 
 # Launch the app agents
