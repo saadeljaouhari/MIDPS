@@ -5,9 +5,10 @@ new_fs_graph_path=utils/server_structure_graph/web_structure_tree
 sleeping_duration=$((5*60))
 
 while true; do
+crawl_start_ts=$(date +"%d/%b/%Y:%H:%M:%S")
 sh utils/crawling_agent/crawling_agent.sh
 # trigger the re-computation of the server structure
-sh utils/server_structure_graph/fs_gen.sh
+sh utils/server_structure_graph/fs_gen.sh $crawl_start_ts
 # check if the fs structure was modified
 has_changed=$(diff $old_fs_graph_path $new_fs_graph_path | wc -l )
 # If changes occured, update the components

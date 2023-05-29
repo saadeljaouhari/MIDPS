@@ -1,7 +1,6 @@
 #!/bin/sh
 
 tmp_log_path="/tmp/logs"
-venv_path="venv"
 
 launch_agents() {
   echo "Launching crawling agents"
