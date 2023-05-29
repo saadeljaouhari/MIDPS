@@ -5,4 +5,4 @@ rm utils/server_structure_graph/parsed_site_data
 
 sh utils/server_structure_graph/extract_crawl_data.sh
 
-python utils/server_structure_graph/referrer_correlation.py
+python3 utils/server_structure_graph/referrer_correlation.py
