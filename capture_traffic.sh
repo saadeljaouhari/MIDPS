@@ -51,6 +51,9 @@ while read line; do
 	difference=$((current_timestamp-window_start_ts))
 
 	if [ $difference -ge $log_window_time ]; then
+		# saving the last line
+		echo $line >> $log_window_file_path
+		# updating the timestamp
 		window_start_ts=$current_timestamp
 		# launch normal traffic monitor
 		# based on the normal traffic monitor launch the other modules
