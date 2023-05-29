@@ -54,7 +54,10 @@ def compute_access_pattern(data_path):
                 method = data[5]
                 resource = data[6]
                 answer = data[8]
-                access_sequence.append("{} {} {} {}".format(timestamp2, method, resource, answer))
+                # if the line is regular
+                if len(data)>=11:
+                    referrer = data[10]
+                access_sequence.append("{} {} {} {} {}".format(timestamp2, method, resource, answer,referrer))
 
             else:
                 log_parts = t0.split(' ')

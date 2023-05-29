@@ -1,6 +1,8 @@
 #!/bin/sh
 
 tmp_log_path="/tmp/logs"
+# divide logs into x seconds windows
+log_window_time=10
 
 launch_agents() {
   echo "Launching crawling agents"
@@ -16,7 +18,6 @@ launch_agents() {
   traffic_generator_agent_pid=$!
 
 }
-
 cleanup() {
   echo "Cleaning up..."
   if [ -n $crawling_agent_pid ]; then
@@ -26,7 +27,8 @@ cleanup() {
     kill "$traffic_generator_agent_pid"
   fi
 
-  rm $tmp_log_path
+  rm -rf $tmp_log_path
+
 
   exit 0
 }
@@ -36,14 +38,30 @@ trap cleanup INT
 # Launch the app agents
 launch_agents
 
-# Check for updates in the file structure
+mkdir $tmp_log_path/
 
+window_start_ts=$(date +%s)
 
-# Input each line to the modules
+log_window_file_path=$tmp_log_path/$window_start_ts
+touch $log_window_file_path
+#Input each line to the modules
 while read line; do
 	# File disclosure
-	echo "$line" | sh ./modules/file_disclosure/script.sh
+	current_timestamp=$(date +%s)
+	difference=$((current_timestamp-window_start_ts))
+
+	if [ $difference -ge $log_window_time ]; then
+		window_start_ts=$current_timestamp
+		# launch normal traffic monitor
+		# based on the normal traffic monitor launch the other modules
+		# Create update the log window file path
+		log_window_file_path=$tmp_log_path/$current_timestamp
+	else
+		echo $line >> $log_window_file_path
+	fi
+
+#	echo "$line" | sh ./modules/file_disclosure/script.sh
 
 	# test
-	echo "$line" | sh ./modules/ddos/script.sh
+#	echo "$line" | sh ./modules/ddos/script.sh
 done
