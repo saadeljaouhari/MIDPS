@@ -1,1 +1,1 @@
-#wget --spider -r -p -nd https://example.com/
+#wget --spider -r -p -nd -e robots=off https://example.com/
