@@ -1,8 +1,0 @@
-209.141.61.36 - - [06/May/2023:03:26:23 +0000] "GET / HTTP/1.1" 200 5937 "-" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-209.141.61.36 - - [06/May/2023:03:26:24 +0000] "GET /CSS/style.css HTTP/1.1" 200 1157 "https://pseudot.org/" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-209.141.61.36 - - [06/May/2023:03:26:25 +0000] "GET /IMAGES/2019.gif HTTP/1.1" 200 1629 "https://pseudot.org/" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-209.141.61.36 - - [06/May/2023:03:26:25 +0000] "GET /IMAGES/nokia64.gif HTTP/1.1" 200 558 "https://pseudot.org/" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-209.141.61.36 - - [06/May/2023:03:26:26 +0000] "GET /IMAGES/firefox3.gif HTTP/1.1" 200 3009 "https://pseudot.org/" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-209.141.61.36 - - [06/May/2023:03:26:26 +0000] "GET /IMAGES/pepsi.gif HTTP/1.1" 200 3682 "https://pseudot.org/" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-209.141.61.36 - - [06/May/2023:03:26:27 +0000] "GET /IMAGES/gnubanner.gif HTTP/1.1" 200 2177 "https://pseudot.org/" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-209.141.61.36 - - [06/May/2023:03:26:27 +0000] "GET /IMAGES/vi.gif HTTP/1.1" 200 5815 "https://pseudot.org/" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"

@@ -1,6 +1,0 @@
-104.192.1.138 - - [05/May/2023:19:28:29 +0000] "GET /posts/moby-dick-herman-melville/moby-dick-herman-melville.html HTTP/1.1" 200 7940 "-" "Mozilla/5.0 (X11; U; Linux i686; it; rv:1.9.2.3) Gecko/20100406 Firefox/3.6.3 (Swiftfox)"
-104.192.1.138 - - [06/May/2023:01:31:45 +0000] "GET /posts/rebonjour/rebonjour.html HTTP/1.1" 200 3930 "-" "Mozilla/5.0 (Windows; U; ; en-NZ) AppleWebKit/527  (KHTML like Gecko Safari/419.3) Arora/0.8.0"
-104.192.1.138 - - [06/May/2023:10:59:29 +0000] "GET /posts/another-daria-thing/another-daria-thing.html HTTP/1.1" 200 5288 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-GB; rv:1.9.1.17) Gecko/20110123 (like Firefox/3.x) SeaMonkey/2.0.12"
-104.192.1.138 - - [06/May/2023:11:52:19 +0000] "GET /posts/rebonjour/rebonjour.html HTTP/1.1" 200 3930 "-" "Mozilla/5.0 (X11; U; Linux x86_64; us; rv:1.9.1.19) Gecko/20110430 shadowfox/7.0 (like Firefox/7.0"
-104.192.1.138 - - [06/May/2023:11:52:49 +0000] "GET / HTTP/1.1" 200 5190 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"
-104.192.1.138 - - [06/May/2023:11:52:50 +0000] "GET /style.css HTTP/1.1" 200 1618 "https://blog.pseudot.org/" "Mozilla/5.0 (X11; Linux x86_64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"

@@ -1,7 +1,0 @@
-45.151.167.12 - - [06/May/2023:10:44:09 +0000] "GET /posts/rebonjour/rebonjour.html HTTP/1.1" 200 3930 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.7 (KHTML like Gecko) Chrome/16.0.912.36 Safari/535.7"
-45.151.167.12 - - [06/May/2023:13:49:45 +0000] "GET /posts/another-daria-thing/another-daria-thing.html HTTP/1.1" 200 5288 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.1) Gecko/20100101 Firefox/10.0.1"
-45.151.167.12 - - [06/May/2023:13:50:00 +0000] "GET /posts/rebonjour/rebonjour.html HTTP/1.1" 200 3930 "-" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-45.151.167.12 - - [06/May/2023:13:52:02 +0000] "GET /posts/pseudopost-7/images/music.gif HTTP/1.1" 200 18234 "https://blog.pseudot.org/posts/pseudopost-7/pseudopost-7.html" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-45.151.167.12 - - [06/May/2023:13:52:02 +0000] "GET /posts/pseudopost-7/images/parigi.jpeg HTTP/1.1" 200 317835 "https://blog.pseudot.org/posts/pseudopost-7/pseudopost-7.html" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-45.151.167.12 - - [06/May/2023:13:52:02 +0000] "GET /posts/pseudopost-7/pseudopost-7.html HTTP/1.1" 200 5039 "-" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-45.151.167.12 - - [07/May/2023:14:14:19 +0000] "GET /posts/rebonjour/rebonjour.html HTTP/1.1" 200 3930 "-" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.16) Gecko/20080716 (Gentoo) Galeon/2.0.6"

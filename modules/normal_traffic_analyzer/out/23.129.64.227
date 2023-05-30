@@ -1,0 +1,4 @@
+23.129.64.227 - - [06/May/2023:23:24:41 +0000] "GET / HTTP/1.1" 200 4567 "-" "Mozilla/5.0 (X11; U; OpenBSD i386; en-US) AppleWebKit/533.3 (KHTML like Gecko) Chrome/5.0.359.0 Safari/533.3"
+23.129.64.227 - - [06/May/2023:23:24:42 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://music.pseudot.org/" "Mozilla/5.0 (X11; U; OpenBSD i386; en-US) AppleWebKit/533.3 (KHTML like Gecko) Chrome/5.0.359.0 Safari/533.3"
+23.129.64.227 - - [06/May/2023:23:25:43 +0000] "GET /posts/pseudopost-6/pseudopost-6.html HTTP/1.1" 200 3343 "-" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.16) Gecko/20080716 (Gentoo) Galeon/2.0.6"
+23.129.64.227 - - [06/May/2023:23:25:44 +0000] "GET /posts/pseudopost-6/images/perna.jpeg HTTP/1.1" 200 175249 "https://blog.pseudot.org/posts/pseudopost-6/pseudopost-6.html" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.16) Gecko/20080716 (Gentoo) Galeon/2.0.6"

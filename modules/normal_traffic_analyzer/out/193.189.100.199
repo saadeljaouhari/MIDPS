@@ -1,0 +1,5 @@
+193.189.100.199 - - [06/May/2023:00:45:30 +0000] "GET /posts/music-logging-using-mpc/music-logging-using-mpc.html HTTP/1.1" 200 5114 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-GB; rv:1.9.0.11) Gecko/2009060215 Firefox/3.0.11 (.NET CLR 3.5.30729)"
+193.189.100.199 - - [06/May/2023:04:07:13 +0000] "GET / HTTP/1.1" 200 1827 "-" "Mozilla/5.0 (X11; Linux i686; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"
+193.189.100.199 - - [06/May/2023:04:07:14 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://books.pseudot.org/" "Mozilla/5.0 (X11; Linux i686; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"
+193.189.100.199 - - [06/May/2023:15:50:46 +0000] "GET / HTTP/1.1" 200 2310 "-" "Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20120403211507 Firefox/12.0"
+193.189.100.199 - - [06/May/2023:15:50:47 +0000] "GET /style.css HTTP/1.1" 200 1653 "https://programming.pseudot.org/" "Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20120403211507 Firefox/12.0"

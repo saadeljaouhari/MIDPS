@@ -1,0 +1,2 @@
+216.218.206.69 - - [08/May/2023:04:56:54 +0000] "GET / HTTP/1.1" 200 239158 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 OPR/95.0.0.0 (Edition Yx 05)"
+216.218.206.69 - - [08/May/2023:04:58:53 +0000] "GET /favicon.ico HTTP/1.1" 404 0 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"

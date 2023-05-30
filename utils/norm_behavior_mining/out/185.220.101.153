@@ -1,2 +1,0 @@
-185.220.101.153 - - [05/May/2023:19:31:06 +0000] "GET /posts/pseudopost-4/images/music.gif HTTP/1.1" 200 9305 "https://blog.pseudot.org/posts/pseudopost-4/pseudopost-4.html" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-185.220.101.153 - - [05/May/2023:19:31:06 +0000] "GET /posts/pseudopost-4/pseudopost-4.html HTTP/1.1" 200 4835 "-" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"

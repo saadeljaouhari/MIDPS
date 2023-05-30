@@ -1,0 +1,2 @@
+130.149.80.199 - - [06/May/2023:09:51:19 +0000] "GET / HTTP/1.1" 200 1827 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20120427 Firefox/15.0a1"
+130.149.80.199 - - [06/May/2023:09:51:20 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://books.pseudot.org/" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20120427 Firefox/15.0a1"

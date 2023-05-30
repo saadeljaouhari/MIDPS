@@ -1,2 +1,0 @@
-79.137.202.92 - - [07/May/2023:20:37:44 +0000] "GET /posts/pseudopost-4/pseudopost-4.html HTTP/1.1" 200 4835 "-" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.7) Gecko/20060909 Firefox/1.5.0.7 MG(Novarra-Vision/6.9)"
-79.137.202.92 - - [07/May/2023:20:37:46 +0000] "GET /posts/pseudopost-4/images/music.gif HTTP/1.1" 200 9305 "https://blog.pseudot.org/posts/pseudopost-4/pseudopost-4.html" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.7) Gecko/20060909 Firefox/1.5.0.7 MG(Novarra-Vision/6.9)"

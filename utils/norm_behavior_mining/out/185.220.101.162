@@ -1,6 +1,0 @@
-185.220.101.162 - - [06/May/2023:01:00:02 +0000] "GET / HTTP/1.1" 200 4567 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20120427 Firefox/15.0a1"
-185.220.101.162 - - [06/May/2023:01:00:03 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://music.pseudot.org/" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20120427 Firefox/15.0a1"
-185.220.101.162 - - [06/May/2023:12:18:50 +0000] "GET /posts/rebonjour/rebonjour.html HTTP/1.1" 200 3930 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.2 (KHTML like Gecko) Ubuntu/11.10 Chromium/15.0.874.120 Chrome/15.0.874.120 Safari/535.2"
-185.220.101.162 - - [06/May/2023:12:19:53 +0000] "GET / HTTP/1.1" 200 1827 "-" "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/540.0 (KHTML like Gecko) Ubuntu/10.10 Chrome/9.1.0.0 Safari/540.0"
-185.220.101.162 - - [06/May/2023:12:19:54 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://books.pseudot.org/" "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/540.0 (KHTML like Gecko) Ubuntu/10.10 Chrome/9.1.0.0 Safari/540.0"
-185.220.101.162 - - [08/May/2023:10:48:13 +0000] "GET /posts/exerci%C8%9Biu-de-scriere-0/exerci%C8%9Biu-de-scriere-0.html HTTP/1.1" 200 3557 "-" "Mozilla/5.0 (X11; U; Linux x86_64; us; rv:1.9.1.19) Gecko/20110430 shadowfox/7.0 (like Firefox/7.0"

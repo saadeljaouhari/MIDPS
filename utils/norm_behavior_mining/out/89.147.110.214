@@ -1,2 +1,0 @@
-89.147.110.214 - - [07/May/2023:02:43:31 +0000] "GET /posts/pseudopost-3/pseudopost-3.html HTTP/1.1" 200 4887 "-" "Mozilla/5.0 (X11; U; Linux i686; en-us) AppleWebKit/528.5  (KHTML like Gecko Safari/528.5 ) lt-GtkLauncher"
-89.147.110.214 - - [07/May/2023:02:43:32 +0000] "GET /posts/pseudopost-3/images/music.gif HTTP/1.1" 200 18234 "https://blog.pseudot.org/posts/pseudopost-3/pseudopost-3.html" "Mozilla/5.0 (X11; U; Linux i686; en-us) AppleWebKit/528.5  (KHTML like Gecko Safari/528.5 ) lt-GtkLauncher"

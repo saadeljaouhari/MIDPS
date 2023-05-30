@@ -29,7 +29,6 @@ cleanup() {
 
   rm -rf $tmp_log_path
 
-
   exit 0
 }
 
@@ -53,12 +52,18 @@ while read line; do
 	if [ $difference -ge $log_window_time ]; then
 		# saving the last line
 		echo $line >> $log_window_file_path
+
+		# launch normal traffic monitor
+		sh ./modules/normal_traffic_analyzer/analyze_traffic.sh $log_window_file_path
+
+		# based on the normal traffic monitor launch the other modules
+
 		# updating the timestamp
 		window_start_ts=$current_timestamp
-		# launch normal traffic monitor
-		# based on the normal traffic monitor launch the other modules
+
 		# Create update the log window file path
 		log_window_file_path=$tmp_log_path/$current_timestamp
+
 	else
 		echo $line >> $log_window_file_path
 	fi
