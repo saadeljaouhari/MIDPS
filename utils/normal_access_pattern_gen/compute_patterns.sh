@@ -13,6 +13,7 @@ rm -rf $extracted_data_path
 mkdir $extracted_data_path
 
 timestamp=$1
+echo $timestamp
 
 mkdir $extracted_data_path/$timestamp
 

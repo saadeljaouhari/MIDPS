@@ -25,6 +25,7 @@ initialize_modules(){
   # we check the existence of the file structure tree file
   # Run the normal traffic generator agent
   sh ./utils/normal_data_traffic_gen/gen_traffic.sh
+  echo $start_ts
   sh ./utils/normal_access_pattern_gen/compute_patterns.sh $start_ts
 
 }
