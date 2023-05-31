@@ -101,7 +101,7 @@ if __name__=="__main__":
 
     delta_time=sys.argv[2]
 
-    normal_access_sequences = compute_access_pattern(log_folder_path)
+    normal_access_sequences = compute_access_pattern(log_folder_path,delta_time)
     #pprint.pprint(normal_access_sequence)
 
     for address in normal_access_sequences.keys():
