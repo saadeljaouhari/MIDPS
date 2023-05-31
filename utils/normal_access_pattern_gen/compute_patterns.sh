@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# de refactorizat scriptu
+
 crawl_log_timeframe=1
 
 
@@ -13,10 +15,11 @@ rm -rf $extracted_data_path
 mkdir $extracted_data_path
 
 timestamp=$1
-echo $timestamp
 
-mkdir $extracted_data_path/$timestamp
+folder_timestamp=(date +%s)
 
-awk -v d1="[$timestamp" '($4) >= d1' $log_file_path | grep -wE "$crawling_agents_ip_regex" | grep -w 200 | grep -w HEAD | sort | uniq > $extracted_data_path/$timestamp/normal_access_logs
+mkdir $extracted_data_path/$folder_timestamp
 
-python3 modules/normal_traffic_analyzer/analyze.py $extracted_data_path/$timestamp $crawl_log_timeframe
+awk -v d1="[$timestamp" '($4) >= d1' $log_file_path | grep -wE "$crawling_agents_ip_regex" | grep -w 200 | grep -w HEAD | sort | uniq > $extracted_data_path/$folder_timestamp/normal_access_logs
+
+python3 modules/normal_traffic_analyzer/analyze.py $extracted_data_path/$folder_timestamp $crawl_log_timeframe

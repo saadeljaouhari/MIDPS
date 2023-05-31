@@ -24,6 +24,7 @@ initialize_modules(){
   # before starting to analyze traffic we need to crawl the web app at least once
   # we check the existence of the file structure tree file
   # Run the normal traffic generator agent
+  echo "aici inainte de eroarea enervanta cu rm"
   sh ./utils/normal_data_traffic_gen/gen_traffic.sh
   sh ./utils/normal_access_pattern_gen/compute_patterns.sh $start_ts
 
