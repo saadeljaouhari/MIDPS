@@ -1,4 +1,0 @@
-109.70.100.16 - - [06/May/2023:13:53:19 +0000] "GET /posts/pseudopost-1/pseudopost-1.html HTTP/1.1" 200 5442 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.1) Gecko/20100101 Firefox/10.0.1"
-109.70.100.16 - - [06/May/2023:13:53:20 +0000] "GET /posts/pseudopost-1/images/panther.gif HTTP/1.1" 200 10962 "https://blog.pseudot.org/posts/pseudopost-1/pseudopost-1.html" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.1) Gecko/20100101 Firefox/10.0.1"
-109.70.100.16 - - [06/May/2023:13:53:21 +0000] "GET /posts/pseudopost-1/images/mouse.gif HTTP/1.1" 200 16506 "https://blog.pseudot.org/posts/pseudopost-1/pseudopost-1.html" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.1) Gecko/20100101 Firefox/10.0.1"
-109.70.100.16 - - [06/May/2023:13:53:21 +0000] "GET /posts/pseudopost-1/images/tweety.gif HTTP/1.1" 200 8392 "https://blog.pseudot.org/posts/pseudopost-1/pseudopost-1.html" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.1) Gecko/20100101 Firefox/10.0.1"

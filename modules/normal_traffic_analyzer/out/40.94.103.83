@@ -1,5 +1,0 @@
-40.94.103.83 - - [06/May/2023:15:02:42 +0000] "GET /CSS/style.css HTTP/1.1" 200 1157 "https://pseudot.org/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
-40.94.103.83 - - [06/May/2023:15:02:42 +0000] "GET / HTTP/1.1" 200 1970 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
-40.94.103.83 - - [06/May/2023:15:02:42 +0000] "GET /IMAGES/2019.gif HTTP/1.1" 200 1629 "https://pseudot.org/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
-40.94.103.83 - - [06/May/2023:15:02:42 +0000] "GET /IMAGES/firefox3.gif HTTP/1.1" 200 3009 "https://pseudot.org/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
-40.94.103.83 - - [06/May/2023:15:02:42 +0000] "GET /IMAGES/nokia64.gif HTTP/1.1" 200 558 "https://pseudot.org/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"

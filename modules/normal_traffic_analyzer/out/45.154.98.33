@@ -1,2 +1,0 @@
-45.154.98.33 - - [06/May/2023:03:24:52 +0000] "GET /posts/pseudopost-6/images/perna.jpeg HTTP/1.1" 200 175249 "https://blog.pseudot.org/posts/pseudopost-6/pseudopost-6.html" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-45.154.98.33 - - [06/May/2023:03:24:52 +0000] "GET /posts/pseudopost-6/pseudopost-6.html HTTP/1.1" 200 3343 "-" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"

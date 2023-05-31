@@ -1,3 +1,5 @@
+modules/normal_traffic_analyzer/norm_traffic
+modules/normal_traffic_analyzer/attack_traffic
 modules/ddos/gen-norm-logs
 utils/data_mining/venv/
 utils/datasets/

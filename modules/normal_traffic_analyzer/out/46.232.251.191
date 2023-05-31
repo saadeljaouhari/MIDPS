@@ -1,2 +1,0 @@
-46.232.251.191 - - [05/May/2023:22:07:05 +0000] "GET /posts/pseudopost-3/pseudopost-3.html HTTP/1.1" 200 4887 "-" "Mozilla/5.0 (Windows; U; WinNT4.0; en-US; rv:1.2b) Gecko/20021001 Phoenix/0.2"
-46.232.251.191 - - [05/May/2023:22:07:06 +0000] "GET /posts/pseudopost-3/images/music.gif HTTP/1.1" 200 18234 "https://blog.pseudot.org/posts/pseudopost-3/pseudopost-3.html" "Mozilla/5.0 (Windows; U; WinNT4.0; en-US; rv:1.2b) Gecko/20021001 Phoenix/0.2"

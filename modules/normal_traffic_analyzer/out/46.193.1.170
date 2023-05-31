@@ -1,4 +1,0 @@
-46.193.1.170 - - [06/May/2023:08:07:54 +0000] "GET / HTTP/1.1" 200 415900 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0"
-46.193.1.170 - - [06/May/2023:08:07:55 +0000] "GET /favicon.png HTTP/1.1" 200 17440 "http://208.76.222.31/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0"
-46.193.1.170 - - [06/May/2023:08:07:55 +0000] "GET /interface-data/init?1683360505032 HTTP/1.1" 401 0 "http://208.76.222.31/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0"
-46.193.1.170 - - [06/May/2023:08:07:57 +0000] "GET /interface-data/init?1683360505032 HTTP/1.1" 200 8119 "http://208.76.222.31/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0"

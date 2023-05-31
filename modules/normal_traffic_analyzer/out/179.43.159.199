@@ -1,3 +1,0 @@
-179.43.159.199 - - [07/May/2023:00:55:00 +0000] "GET / HTTP/1.1" 200 5190 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.1 (KHTML like Gecko) Chrome/13.0.782.20 Safari/535.1"
-179.43.159.199 - - [07/May/2023:00:55:01 +0000] "GET /style.css HTTP/1.1" 200 1618 "https://blog.pseudot.org/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.1 (KHTML like Gecko) Chrome/13.0.782.20 Safari/535.1"
-179.43.159.199 - - [07/May/2023:00:58:49 +0000] "GET /posts/ho-iniziato-a-imparare-litaliano/ho-iniziato-a-imparare-litaliano.html HTTP/1.1" 200 3935 "-" "Mozilla/5.0 (X11; U; Linux x86_64; us; rv:1.9.1.19) Gecko/20110430 shadowfox/7.0 (like Firefox/7.0"

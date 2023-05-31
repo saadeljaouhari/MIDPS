@@ -1,2 +1,0 @@
-45.61.185.249 - - [06/May/2023:04:33:43 +0000] "GET / HTTP/1.1" 200 4567 "-" "Mozilla/5.0 (X11; Linux i686; rv:6.0) Gecko/20100101 Firefox/6.0"
-45.61.185.249 - - [06/May/2023:04:33:43 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://music.pseudot.org/" "Mozilla/5.0 (X11; Linux i686; rv:6.0) Gecko/20100101 Firefox/6.0"

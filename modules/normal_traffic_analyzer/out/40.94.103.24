@@ -1,2 +1,0 @@
-40.94.103.24 - - [06/May/2023:15:02:42 +0000] "GET /IMAGES/pepsi.gif HTTP/1.1" 200 3682 "https://pseudot.org/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
-40.94.103.24 - - [06/May/2023:15:02:42 +0000] "GET /IMAGES/vi.gif HTTP/1.1" 200 5815 "https://pseudot.org/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"

@@ -1,8 +1,0 @@
-185.35.202.222 - - [05/May/2023:22:37:27 +0000] "GET / HTTP/1.1" 200 5937 "-" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-185.35.202.222 - - [05/May/2023:22:37:28 +0000] "GET /CSS/style.css HTTP/1.1" 200 1157 "https://pseudot.org/" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-185.35.202.222 - - [05/May/2023:22:37:28 +0000] "GET /IMAGES/nokia64.gif HTTP/1.1" 200 558 "https://pseudot.org/" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-185.35.202.222 - - [05/May/2023:22:37:29 +0000] "GET /IMAGES/2019.gif HTTP/1.1" 200 1629 "https://pseudot.org/" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-185.35.202.222 - - [05/May/2023:22:37:29 +0000] "GET /IMAGES/firefox3.gif HTTP/1.1" 200 3009 "https://pseudot.org/" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-185.35.202.222 - - [05/May/2023:22:37:29 +0000] "GET /IMAGES/pepsi.gif HTTP/1.1" 200 3682 "https://pseudot.org/" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-185.35.202.222 - - [05/May/2023:22:37:30 +0000] "GET /IMAGES/gnubanner.gif HTTP/1.1" 200 2177 "https://pseudot.org/" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"
-185.35.202.222 - - [05/May/2023:22:37:30 +0000] "GET /IMAGES/vi.gif HTTP/1.1" 200 5815 "https://pseudot.org/" "Mozilla/5.0 (X11; Linux i686; rv:6.0a2) Gecko/20110615 Firefox/6.0a2 Iceweasel/6.0a2"

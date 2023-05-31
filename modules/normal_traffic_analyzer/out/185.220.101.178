@@ -1,2 +1,0 @@
-185.220.101.178 - - [07/May/2023:08:57:20 +0000] "GET /posts/pseudopost-6/pseudopost-6.html HTTP/1.1" 200 3343 "-" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
-185.220.101.178 - - [07/May/2023:08:57:21 +0000] "GET /posts/pseudopost-6/images/perna.jpeg HTTP/1.1" 200 175249 "https://blog.pseudot.org/posts/pseudopost-6/pseudopost-6.html" "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"

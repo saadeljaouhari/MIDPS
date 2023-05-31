@@ -1,2 +1,0 @@
-45.66.35.35 - - [05/May/2023:19:25:09 +0000] "GET / HTTP/1.1" 200 4567 "-" "Mozilla/5.0 (Windows; U; Windows XP) Gecko MultiZilla/1.6.1.0a"
-45.66.35.35 - - [05/May/2023:19:25:10 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://music.pseudot.org/" "Mozilla/5.0 (Windows; U; Windows XP) Gecko MultiZilla/1.6.1.0a"

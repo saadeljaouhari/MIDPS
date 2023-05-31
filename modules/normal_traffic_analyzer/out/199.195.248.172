@@ -1,2 +1,0 @@
-199.195.248.172 - - [06/May/2023:04:53:28 +0000] "GET / HTTP/1.1" 200 1827 "-" "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/540.0 (KHTML like Gecko) Ubuntu/10.10 Chrome/9.1.0.0 Safari/540.0"
-199.195.248.172 - - [06/May/2023:04:53:29 +0000] "GET /style.css HTTP/1.1" 200 1651 "https://books.pseudot.org/" "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/540.0 (KHTML like Gecko) Ubuntu/10.10 Chrome/9.1.0.0 Safari/540.0"

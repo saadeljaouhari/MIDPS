@@ -26,8 +26,8 @@ def compute_access_pattern(data_path):
         t1=''
         access_sequence = []
 
-        # time threshold
-        delta_time = 30
+        # computing the delta time
+        delta_time = 3
 
         for line in lines:
 
@@ -49,9 +49,11 @@ def compute_access_pattern(data_path):
 
             time_difference = datetime2 - datetime1
 
-
             # if we re inside the working sequence
-            if time_difference.total_seconds() < delta_time:
+            if time_difference.total_seconds() <= delta_time:
+                #delta_time += time_difference.total_seconds()
+                #print(delta_time)
+
                 data = t1.split(' ')
                 method = data[5]
                 resource = data[6]
@@ -70,9 +72,13 @@ def compute_access_pattern(data_path):
 
                 else:
                     normal_access_sequences[address]=[access_sequence]
-                # change the root line
+                # reset the timer
+                #delta_time=0
+                # reinitialise the access sequence
                 access_sequence = []
-                t0=t1
+
+            # change the root line
+            t0=t1
 
         # add the last processed sequence
         log_parts = t0.split(' ')
@@ -86,9 +92,17 @@ def compute_access_pattern(data_path):
 
     return normal_access_sequences
 
+def analyze_request_sequence(address,access_sequence):
+    print(address)
+    print(access_sequence)
+
+
 if __name__=="__main__":
 
     log_folder_path=sys.argv[1]
 
-    normal_access_sequence = compute_access_pattern(log_folder_path)
-    pprint.pprint(normal_access_sequence)
+    normal_access_sequences = compute_access_pattern(log_folder_path)
+    #pprint.pprint(normal_access_sequence)
+
+    for address in normal_access_sequences.keys():
+        analyze_request_sequence(address,normal_access_sequences[address])

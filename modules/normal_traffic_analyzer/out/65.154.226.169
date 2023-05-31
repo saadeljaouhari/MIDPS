@@ -1,2 +1,0 @@
-65.154.226.169 - - [07/May/2023:14:22:34 +0000] "GET / HTTP/1.1" 200 1583 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/112.0.5615.121 Safari/537.36"
-65.154.226.169 - - [07/May/2023:14:22:35 +0000] "GET /style.css HTTP/1.1" 200 1618 "https://208.76.222.31/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/112.0.5615.121 Safari/537.36"
