@@ -18,6 +18,13 @@ launch_agents() {
   #traffic_generator_agent_pid=$!
 
 }
+initialize_modules(){
+# before starting to analyze traffic we need to crawl the web app at least once
+# we check the existence of the file structure tree file
+  # Run the crawling agent
+  sh ./utils/crawling_agent/run_fs_update_agent.sh
+
+}
 cleanup() {
   echo "Cleaning up..."
   if [ -n $crawling_agent_pid ]; then
@@ -33,8 +40,12 @@ cleanup() {
 }
 
 trap cleanup INT
+# initalize the app
+echo "Initialising (this may take some time)"
+initialize_modules
 
 # Launch the app agents
+echo "Launching the app agents"
 launch_agents
 
 mkdir $tmp_log_path/
