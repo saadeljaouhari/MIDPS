@@ -19,10 +19,13 @@ launch_agents() {
 
 }
 initialize_modules(){
+  # we timestamp the begginning of the operation
+  start_ts=$(date +%s)
   # before starting to analyze traffic we need to crawl the web app at least once
   # we check the existence of the file structure tree file
   # Run the normal traffic generator agent
   sh ./utils/normal_data_traffic_gen/gen_traffic.sh
+  sh ./utils/normal_access_pattern_gen/compute_patterns.sh $start_ts
 
 }
 cleanup() {
