@@ -17,7 +17,7 @@ sh utils/gen_resource_links/gen_resource_links.sh
 mv -f utils/gen_resource_links/web_page_links utils/normal_data_traffic_gen
 fi
 # trigger the re-computation of the access patterns structure
-sh utils/normal_access_pattern_gen/compute_norm_access_sequences.sh $crawl_start_ts
+sh utils/normal_access_pattern_gen/compute_norm_access_sequences.sh
 # check if the access pattern structure was modified
 has_changed=$(diff $old_fs_graph_path $new_fs_graph_path | wc -l )
 

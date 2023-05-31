@@ -19,10 +19,10 @@ launch_agents() {
 
 }
 initialize_modules(){
-# before starting to analyze traffic we need to crawl the web app at least once
-# we check the existence of the file structure tree file
-  # Run the crawling agent
-  sh ./utils/crawling_agent/run_fs_update_agent.sh
+  # before starting to analyze traffic we need to crawl the web app at least once
+  # we check the existence of the file structure tree file
+  # Run the normal traffic generator agent
+  sh ./utils/normal_data_traffic_gen/gen_traffic.sh
 
 }
 cleanup() {
