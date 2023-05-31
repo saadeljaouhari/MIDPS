@@ -5,7 +5,7 @@ import re
 from datetime import datetime
 
 
-def compute_access_pattern(data_path):
+def compute_access_pattern(data_path,delta_time):
 
     timestamp_format = "%d/%b/%Y:%H:%M:%S %z"
     timestamp_pattern = r'\[(.*?)\]'
@@ -26,8 +26,6 @@ def compute_access_pattern(data_path):
         t1=''
         access_sequence = []
 
-        # computing the delta time
-        delta_time = 3
 
         for line in lines:
 
@@ -100,6 +98,8 @@ def analyze_request_sequence(address,access_sequence):
 if __name__=="__main__":
 
     log_folder_path=sys.argv[1]
+
+    delta_time=sys.argv[2]
 
     normal_access_sequences = compute_access_pattern(log_folder_path)
     #pprint.pprint(normal_access_sequence)
