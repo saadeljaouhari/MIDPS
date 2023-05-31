@@ -16,7 +16,7 @@ mkdir $extracted_data_path
 
 timestamp=$1
 
-folder_timestamp=(date +%s)
+folder_timestamp=$(date +%s)
 
 mkdir $extracted_data_path/$folder_timestamp
 
