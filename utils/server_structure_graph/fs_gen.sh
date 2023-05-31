@@ -9,6 +9,7 @@ rm $extracted_data_path
 
 crawl_start_ts=$1
 
+echo $extracted_data_path
 sh utils/server_structure_graph/extract_crawl_data.sh $crawl_start_ts $extracted_data_path
 
 python3 utils/server_structure_graph/referrer_correlation.py
