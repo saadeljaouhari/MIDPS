@@ -13,9 +13,9 @@ launch_agents() {
   crawling_agent_pid=$!
 
   # Run the normal traffic generator agent
-  sh ./utils/normal_data_traffic_gen/gen_traffic.sh &
+  #sh ./utils/normal_data_traffic_gen/gen_traffic.sh &
 
-  traffic_generator_agent_pid=$!
+  #traffic_generator_agent_pid=$!
 
 }
 cleanup() {

@@ -8,7 +8,7 @@ log_folder_path=$log_file_path-frame
 mkdir $log_folder_path
 
 # separate the ips from the logs
-awk '{ print $1 }' $log_file_path | uniq > $log_folder_path/ip_list
+awk '{ print $1 }' $log_file_path | sort | uniq > $log_folder_path/ip_list
 # separate the logs by ip
 sh modules/normal_traffic_analyzer/separate_logs_by_ip.sh $log_file_path $log_folder_path
 # remove the log file
