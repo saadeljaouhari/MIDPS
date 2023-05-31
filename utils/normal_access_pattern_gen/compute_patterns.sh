@@ -9,6 +9,7 @@ crawling_agents_ip_regex=$(ifconfig $interface_name  | grep inet | awk '{print $
 log_file_path='/var/log/nginx/access.log'
 
 extracted_data_path=utils/normal_access_pattern_gen/crawl_logs
+rm -rf $extracted_data_path
 mkdir $extracted_data_path
 
 timestamp=$1

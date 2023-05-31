@@ -12,6 +12,8 @@ def compute_access_pattern(data_path,delta_time):
 
     normal_access_sequences={}
 
+    delta_time=int(delta_time)
+
     for file_path in os.listdir(data_path):
 
         if file_path == 'ip_list':
