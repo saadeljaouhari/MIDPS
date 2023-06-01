@@ -20,6 +20,6 @@ folder_timestamp=$(date +%s)
 
 mkdir $extracted_data_path/$folder_timestamp
 
-awk -v d1="[$timestamp" '($4) >= d1' $log_file_path | grep -wE "$crawling_agents_ip_regex" | grep -w 200 | grep -w HEAD | sort | uniq > $extracted_data_path/$folder_timestamp/normal_access_logs
+awk -v d1="[$timestamp" '($4) >= d1' $log_file_path | grep -wE "$crawling_agents_ip_regex" | grep -w 200 | grep -w GET | sort | uniq > $extracted_data_path/$folder_timestamp/normal_access_logs
 
 python3 modules/normal_traffic_analyzer/analyze.py $extracted_data_path/$folder_timestamp $crawl_log_timeframe
