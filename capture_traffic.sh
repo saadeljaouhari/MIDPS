@@ -26,7 +26,8 @@ initialize_modules(){
   # Run the normal traffic generator agent
   echo "aici inainte de eroarea enervanta cu rm"
   sh ./utils/normal_data_traffic_gen/gen_traffic.sh
-  sh ./utils/normal_access_pattern_gen/compute_patterns.sh $start_ts
+  echo "finished generating traffic"
+#  sh ./utils/normal_access_pattern_gen/compute_patterns.sh $start_ts
 
 }
 cleanup() {
