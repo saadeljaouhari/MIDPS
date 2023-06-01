@@ -4,7 +4,6 @@ web_structure_tree_path=utils/server_structure_graph/web_structure_tree
 
 
 rm $web_structure_tree_path
-rm $extracted_data_path
 
 crawl_start_ts=$1
 
