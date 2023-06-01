@@ -6,7 +6,7 @@ crawl_log_timeframe=1
 
 
 interface_name='enp1s0'
-crawling_agents_ip_regex=$(ifconfig $interface_name  | grep inet | awk '{print $2}' | sed -z 's/\n/|/g')
+crawling_agents_ip_regex=$(ifconfig $interface_name  | grep inet6 | awk '{print $2}' | sed -z 's/\n/|/g')
 
 log_file_path='/var/log/nginx/access.log'
 
