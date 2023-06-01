@@ -1,6 +1,6 @@
 #!/bin/sh
 links_file_path="utils/gen_resource_links/web_pages"
-output_file_path="utils/gen_resource_links/web_page_links"
+output_file_path="modules/resources/web_page_links"
 
 rm $output_file_path
 while IFS= read -r link; do

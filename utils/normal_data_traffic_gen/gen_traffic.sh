@@ -1,5 +1,5 @@
 #!/bin/sh
-links_file_path='utils/normal_data_traffic_gen/web_page_links'
+links_file_path='modules/resources/web_page_links'
 
 download_path='utils/normal_data_traffic_gen/page_output_tmp'
 
