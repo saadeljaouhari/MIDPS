@@ -23,6 +23,8 @@ initialize_modules(){
 
   sh utils/gen_resource_links/gen_resource_links.sh
   # we timestamp the begginning of the operation
+  # we wait one second of sync reasons
+  sleep 1
   start_ts=$(date +"%d/%b/%Y:%H:%M:%S")
   # before starting to analyze traffic we need to crawl the web app at least once
   # we check the existence of the file structure tree file
