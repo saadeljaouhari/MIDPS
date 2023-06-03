@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# de refactorizat scriptu
-
 crawl_log_timeframe=1
 
 

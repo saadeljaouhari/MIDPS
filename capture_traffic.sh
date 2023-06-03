@@ -24,7 +24,6 @@ initialize_modules(){
   sh utils/gen_resource_links/gen_resource_links.sh
   # we timestamp the begginning of the operation
   # we wait one second of sync reasons
-  sleep 2
   start_ts=$(date +"%d/%b/%Y:%H:%M:%S")
   # before starting to analyze traffic we need to crawl the web app at least once
   # we check the existence of the file structure tree file
@@ -54,7 +53,7 @@ initialize_modules
 
 # Launch the app agents
 echo "Launching the app agents"
-launch_agents
+#launch_agents
 
 mkdir $tmp_log_path/
 
@@ -73,7 +72,7 @@ while read line; do
 		echo $line >> $log_window_file_path
 
 		# launch normal traffic monitor
-		sh ./modules/normal_traffic_analyzer/analyze_traffic.sh $log_window_file_path
+		#sh ./modules/normal_traffic_analyzer/analyze_traffic.sh $log_window_file_path
 
 		# based on the normal traffic monitor launch the other modules
 
