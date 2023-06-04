@@ -116,7 +116,7 @@ if __name__=="__main__":
             with open(output_path,"w+") as file:
                 for address in normal_access_sequences.keys():
                     for access_sequence in normal_access_sequences[address]:
-                        file.write(access_sequence)
+                        file.write(''.join(access_sequence))
                         file.write("\n")
         else:
             print("No output path specified!")

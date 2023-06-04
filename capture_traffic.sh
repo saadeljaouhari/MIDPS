@@ -12,6 +12,7 @@ launch_agents() {
 
   crawling_agent_pid=$!
 
+  # de computat pe fundal access patternurile
   # Run the normal traffic generator agent
   #sh ./utils/normal_data_traffic_gen/gen_traffic.sh &
 
@@ -20,6 +21,7 @@ launch_agents() {
 }
 initialize_modules(){
   # we generate the links to all the resources for further operations
+  # sa verific daca nu cumva exista deja un access pattern, de la alta operatie
 
   web_pages_file_path="utils/gen_resource_links/web_pages"
   output_links_file_path="modules/resources/web_page_links"
