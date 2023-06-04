@@ -1,7 +1,7 @@
 #!/bin/sh
 
-web_pages_path="utils/crawling_agent/web_pages"
+links_file_path=$1
 
 while IFS= read -r link; do
 	wget --inet4-only -q --spider -e robots=off -r -p -nd $link
-done < $web_pages_path
+done < $links_file_path

@@ -1,8 +1,7 @@
 #!/bin/sh
-links_file_path="utils/gen_resource_links/web_pages"
-output_file_path="modules/resources/web_page_links"
+links_file_path=$1
+output_file_path=$2
 
-rm $output_file_path
 while IFS= read -r link; do
 	wget --inet4-only --spider -r -nd -e robots=off --follow-tags=a --no-verbose "$link" 2>&1 | grep tmp | awk '{print $3}' | sed -e 's/URL://g' | uniq >> $output_file_path
 

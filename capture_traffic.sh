@@ -53,7 +53,7 @@ initialize_modules
 
 # Launch the app agents
 echo "Launching the app agents"
-#launch_agents
+launch_agents
 
 mkdir $tmp_log_path/
 
