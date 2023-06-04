@@ -2,6 +2,9 @@
 
 crawl_log_timeframe=1
 
+analyzing_script_command="export"
+
+output_sequences_path='modules/resources/normal_access_patterns'
 
 interface_name='enp1s0'
 crawling_agent_ip=$(ifconfig $interface_name  | grep inet6 | head -n 1 |  awk '{print $2}' )
@@ -20,4 +23,4 @@ mkdir $extracted_data_path/$folder_timestamp
 
 awk -v d1="[$timestamp" '($4) >= d1' $log_file_path | grep -wE "$crawling_agent_ip" | grep -w 200 | grep -w GET | sort | uniq > $extracted_data_path/$folder_timestamp/normal_access_logs
 
-python3 modules/normal_traffic_analyzer/analyze.py $extracted_data_path/$folder_timestamp $crawl_log_timeframe
+python3 modules/normal_traffic_analyzer/analyze.py $analyzing_script_command $extracted_data_path/$folder_timestamp $crawl_log_timeframe $output_sequences_path

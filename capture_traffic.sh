@@ -79,7 +79,7 @@ while read line; do
 		echo $line >> $log_window_file_path
 
 		# launch normal traffic monitor
-		#sh ./modules/normal_traffic_analyzer/analyze_traffic.sh $log_window_file_path
+		sh ./modules/normal_traffic_analyzer/analyze_traffic.sh $log_window_file_path
 
 		# based on the normal traffic monitor launch the other modules
 

@@ -2,6 +2,7 @@ import os
 import sys
 import pprint
 import re
+import json
 from datetime import datetime
 
 
@@ -99,12 +100,27 @@ def analyze_request_sequence(address,access_sequence):
 
 if __name__=="__main__":
 
-    log_folder_path=sys.argv[1]
+    command=sys.argv[1]
 
-    delta_time=sys.argv[2]
+    log_folder_path=sys.argv[2]
+
+    delta_time=sys.argv[3]
 
     normal_access_sequences = compute_access_pattern(log_folder_path,delta_time)
-    #pprint.pprint(normal_access_sequence)
+    # switch on the commands
+    # export the computed access patterns
+    if command == "export":
+        #pprint.pprint(normal_access_sequence)
+        output_path = sys.argv[4]
+        if output_path is not None:
+            with open(output_path) as file:
+                for address in normal_access_sequences.keys():
+                    for access_sequence in normal_access_sequences[address]:
+                        file.write(access_sequence)
+                        file.write("\n")
+        else:
+            print("No output path specified!")
 
-    for address in normal_access_sequences.keys():
-        analyze_request_sequence(address,normal_access_sequences[address])
+    if command == "analyze":
+        for address in normal_access_sequences.keys():
+            analyze_request_sequence(address,normal_access_sequences[address])
