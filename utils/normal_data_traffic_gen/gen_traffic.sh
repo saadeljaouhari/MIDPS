@@ -1,9 +1,10 @@
 #!/bin/sh
-links_file_path='modules/resources/web_page_links'
 
 download_path='utils/normal_data_traffic_gen/page_output_tmp'
 
-sleep_duration=2
+links_file_path=$1
+
+sleep_duration=$2
 
 while IFS= read -r link; do
 	rm -rf $download_path
