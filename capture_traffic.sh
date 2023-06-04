@@ -3,6 +3,9 @@
 tmp_log_path="/tmp/logs"
 # divide logs into x seconds windows
 log_window_time=10
+interface_name='enp1s0'
+
+crawling_agent_ip=$(ifconfig $interface_name  | grep inet6 | head -n 1 |  awk '{print $2}' )
 
 launch_agents() {
   echo "Launching crawling agents"
@@ -38,7 +41,7 @@ initialize_modules(){
   # we check the existence of the file structure tree file
   # Run the normal traffic generator agent
   sh ./utils/normal_data_traffic_gen/gen_traffic.sh $output_links_file_path $sleep_time_between_accesses
-  sh ./utils/normal_access_pattern_gen/compute_patterns.sh $start_ts
+  sh ./utils/normal_access_pattern_gen/compute_patterns.sh $crawling_agent_ip $start_ts
 
 }
 cleanup() {

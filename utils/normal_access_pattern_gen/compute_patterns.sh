@@ -6,16 +6,14 @@ analyzing_script_command="export"
 
 output_sequences_path='modules/resources/normal_access_patterns'
 
-interface_name='enp1s0'
-crawling_agent_ip=$(ifconfig $interface_name  | grep inet6 | head -n 1 |  awk '{print $2}' )
-
 log_file_path='/var/log/nginx/access.log'
 
 extracted_data_path=utils/normal_access_pattern_gen/crawl_logs
 rm -rf $extracted_data_path
 mkdir $extracted_data_path
 
-timestamp=$1
+crawling_agent_ip=$1
+timestamp=$2
 
 folder_timestamp=$(date +%s)
 

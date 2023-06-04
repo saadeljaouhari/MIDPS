@@ -5,6 +5,19 @@ import re
 import json
 from datetime import datetime
 
+def append_data_in_array(line,timestamp,arr):
+
+        data = line.split(' ')
+        method = data[5]
+        resource = data[6]
+        answer = data[8]
+        # if the line is regular
+        if len(data)>=11:
+            referrer = data[10]
+        arr.append("{} {} {} {} {}".format(timestamp, method, resource, answer,referrer))
+
+        return arr
+
 
 def compute_access_pattern(data_path,delta_time):
 
@@ -13,7 +26,7 @@ def compute_access_pattern(data_path,delta_time):
 
     normal_access_sequences={}
 
-    delta_time=int(delta_time)
+    delta_time=float(delta_time)
 
     for file_path in os.listdir(data_path):
 
@@ -52,17 +65,8 @@ def compute_access_pattern(data_path,delta_time):
 
             # if we re inside the working sequence
             if time_difference.total_seconds() <= delta_time:
-                #delta_time += time_difference.total_seconds()
-                #print(delta_time)
-
-                data = t1.split(' ')
-                method = data[5]
-                resource = data[6]
-                answer = data[8]
-                # if the line is regular
-                if len(data)>=11:
-                    referrer = data[10]
-                access_sequence.append("{} {} {} {} {}".format(timestamp2, method, resource, answer,referrer))
+                
+                access_sequence = append_data_in_array(t1,timestamp2,access_sequence)
 
             else:
                 log_parts = t0.split(' ')
@@ -75,9 +79,9 @@ def compute_access_pattern(data_path,delta_time):
                     normal_access_sequences[address]=[access_sequence]
                 # reset the timer
                 #delta_time=0
-                # reinitialise the access sequence
+                # reinitialise the access sequence and append the first line
                 access_sequence = []
-
+                access_sequence = append_data_in_array(t1,timestamp2,access_sequence)
             # change the root line
             t0=t1
 
@@ -116,8 +120,9 @@ if __name__=="__main__":
             with open(output_path,"w+") as file:
                 for address in normal_access_sequences.keys():
                     for access_sequence in normal_access_sequences[address]:
-                        file.write(''.join(access_sequence))
+                        file.write(','.join(access_sequence))
                         file.write("\n")
+            print(normal_access_sequences)
         else:
             print("No output path specified!")
 
