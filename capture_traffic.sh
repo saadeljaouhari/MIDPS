@@ -66,6 +66,7 @@ mkdir $tmp_log_path/
 
 window_start_ts=$(date +%s)
 
+# sa vad cum sa fac sa ignor ipurile de la interfetele mele pt logat
 log_window_file_path=$tmp_log_path/$window_start_ts
 touch $log_window_file_path
 #Input each line to the modules

@@ -113,7 +113,7 @@ if __name__=="__main__":
         #pprint.pprint(normal_access_sequence)
         output_path = sys.argv[4]
         if output_path is not None:
-            with open(output_path) as file:
+            with open(output_path,"w+") as file:
                 for address in normal_access_sequences.keys():
                     for access_sequence in normal_access_sequences[address]:
                         file.write(access_sequence)
