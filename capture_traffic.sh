@@ -79,7 +79,7 @@ touch $log_window_file_path
 while read line; do
 
 	#Check if the line contains one of the local agents ip so we can ignore it
-	contains_local_ip=$(grep -E "$crawling_agent_ip4|$crawling_agent_ip6" $line | wc -l )
+	contains_local_ip=$(grep -E "$crawling_agent_ip4|$crawling_agent_ip6" "$line" | wc -l )
 	if [ $contains_local_ip -ne 0 ]; then
 		continue
 	fi
