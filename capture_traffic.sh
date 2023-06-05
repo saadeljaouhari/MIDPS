@@ -83,6 +83,7 @@ touch $log_window_file_path
 while true
 do
 	current_timestamp=$(date +%s)
+	current_ts_formatted=$(date +"%d/%b/%Y:%H:%M:%S")
 	difference=$((current_timestamp-window_start_ts))
 
 	if [ $difference -ge $log_window_time ]; then
@@ -96,7 +97,6 @@ do
 	## update the timestamps
 	window_start_ts=$current_timestamp
 
-	current_ts_formatted=$(date +"%d/%b/%Y:%H:%M:%S" -d "$current_timestamp")
 	window_start_ts_formatted=$current_ts_formatted
 
 	## Create update the log window file path
