@@ -65,7 +65,7 @@ def compute_access_pattern(data_path,delta_time):
 
             # if we re inside the working sequence
             if time_difference.total_seconds() <= delta_time:
-                
+
                 access_sequence = append_data_in_array(t1,timestamp2,access_sequence)
 
             else:
@@ -122,7 +122,6 @@ if __name__=="__main__":
                     for access_sequence in normal_access_sequences[address]:
                         file.write(','.join(access_sequence))
                         file.write("\n")
-            print(normal_access_sequences)
         else:
             print("No output path specified!")
 
