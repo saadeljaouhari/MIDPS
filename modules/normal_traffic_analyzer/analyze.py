@@ -3,7 +3,17 @@ import sys
 import pprint
 import re
 import json
+import threading
 from datetime import datetime
+
+def process_access_seq_file(file_path):
+    result=[]
+    file = open(file_path, "r")
+    for line in file.readlines():
+        line = line.rstrip('\n')
+        seq = line.split(',')
+        result.append(sorted(seq))
+    return result
 
 def append_data_in_array(line,timestamp,arr):
 
@@ -14,6 +24,8 @@ def append_data_in_array(line,timestamp,arr):
         # if the line is regular
         if len(data)>=11:
             referrer = data[10]
+        else:
+            referrer = '"-"'
         arr.append("{} {} {} {} {}".format(timestamp, method, resource, answer,referrer))
 
         return arr
@@ -110,7 +122,7 @@ if __name__=="__main__":
 
     delta_time=sys.argv[3]
 
-    normal_access_sequences = compute_access_pattern(log_folder_path,delta_time)
+    #normal_access_sequences = compute_access_pattern(log_folder_path,delta_time)
     # switch on the commands
     # export the computed access patterns
     if command == "export":
@@ -126,5 +138,9 @@ if __name__=="__main__":
             print("No output path specified!")
 
     if command == "analyze":
+        normal_access_seq_file = sys.argv[4]
+        access_sequences = process_access_seq_file(normal_access_seq_file)
+
         for address in normal_access_sequences.keys():
-            analyze_request_sequence(address,normal_access_sequences[address])
+            th = threading.Thread(target=analyze_request_sequence, args=(address,normal_access_sequences[address]))
+            th.start()
