@@ -26,7 +26,7 @@ def append_data_in_array(line,timestamp,arr):
             referrer = data[10]
         else:
             referrer = '"-"'
-        arr.append("{} {} {} {} {}".format(timestamp, method, resource, answer,referrer))
+        arr.append("{} {} {} {}".format(method, resource, answer,referrer))
 
         return arr
 

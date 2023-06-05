@@ -30,8 +30,9 @@ initialize_modules(){
 
   web_pages_file_path="utils/gen_resource_links/web_pages"
   output_links_file_path="modules/resources/web_page_links"
+  normal_sequences_path='modules/resources/normal_access_patterns'
 
-  if [ ! -f $output_links_file_path ]
+  if [ ! -f $normal_sequences_path ]
   then
   # the page crawling delay
   sleep_time_between_accesses=2
