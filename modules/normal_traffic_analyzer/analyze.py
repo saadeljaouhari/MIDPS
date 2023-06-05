@@ -122,7 +122,7 @@ if __name__=="__main__":
 
     delta_time=sys.argv[3]
 
-    #normal_access_sequences = compute_access_pattern(log_folder_path,delta_time)
+    normal_access_sequences = compute_access_pattern(log_folder_path,delta_time)
     # switch on the commands
     # export the computed access patterns
     if command == "export":
