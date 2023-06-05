@@ -120,7 +120,7 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
         print("{} made a normal access. \n Access seq: {} ".format(address, list_str ))
     else:
         # send the sequence to further analysis
-        print("{} made a suspect access. \n Access seq: {} ".format(address, list_str)))
+        print("{} made a suspect access. \n Access seq: {} ".format(address, list_str))
 
 
 if __name__=="__main__":
