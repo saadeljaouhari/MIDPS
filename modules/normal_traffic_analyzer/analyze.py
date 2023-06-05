@@ -12,7 +12,7 @@ def process_access_seq_file(file_path):
     for line in file.readlines():
         line = line.rstrip('\n')
         seq = line.split(',')
-        result.append(sorted(seq))
+        result.append(seq)
     return result
 
 def append_data_in_array(line,timestamp,arr):
@@ -109,9 +109,19 @@ def compute_access_pattern(data_path,delta_time):
 
     return normal_access_sequences
 
-def analyze_request_sequence(address,access_sequence):
-    print(address)
-    print(access_sequence)
+def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
+    matched_sequence = False
+    for sequence in computed_norm_access_seq:
+        if sorted(access_sequence) == sorted(sequence):
+            matched_sequence = True
+            break
+    if matched_sequence:
+        print("{} made a normal access. \n Access seq: {} ".format(address, ','.join(access_sequence) ))
+    else:
+        # send the sequence to further analysis
+        print("{} made a suspect access. \n Access seq: {} ".format(address, ','.join(access_sequence)))
+
+
 
 
 if __name__=="__main__":
@@ -139,8 +149,8 @@ if __name__=="__main__":
 
     if command == "analyze":
         normal_access_seq_file = sys.argv[4]
-        access_sequences = process_access_seq_file(normal_access_seq_file)
+        computed_norm_access_seq = process_access_seq_file(normal_access_seq_file)
 
         for address in normal_access_sequences.keys():
-            th = threading.Thread(target=analyze_request_sequence, args=(address,normal_access_sequences[address]))
+            th = threading.Thread(target=analyze_request_sequence, args=(address,normal_access_sequences[address],computed_norm_access_seq))
             th.start()
