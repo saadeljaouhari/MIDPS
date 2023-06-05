@@ -5,7 +5,8 @@ tmp_log_path="/tmp/logs"
 log_window_time=10
 interface_name='enp1s0'
 
-crawling_agent_ip=$(ifconfig $interface_name  | grep inet6 | head -n 1 |  awk '{print $2}' )
+crawling_agent_ip4=$(ifconfig $interface_name  | grep inet | head -n 1 |  awk '{print $2}' )
+crawling_agent_ip6=$(ifconfig $interface_name  | grep inet6 | head -n 1 |  awk '{print $2}' )
 
 launch_agents() {
   echo "Launching crawling agents"
@@ -76,6 +77,12 @@ log_window_file_path=$tmp_log_path/$window_start_ts
 touch $log_window_file_path
 #Input each line to the modules
 while read line; do
+
+	#Check if the line contains one of the local agents ip so we can ignore it
+	contains_local_ip=$(grep -E "$crawling_agent_ip4|$crawling_agent_ip6" $line | wc -l )
+	if [ $contains_local_ip -ne 0 ]; then
+		continue
+	fi
 	# File disclosure
 	current_timestamp=$(date +%s)
 	difference=$((current_timestamp-window_start_ts))
