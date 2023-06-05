@@ -4,8 +4,6 @@ crawl_log_timeframe=1
 
 analyzing_script_command="export"
 
-output_sequences_path='modules/resources/normal_access_patterns'
-
 log_file_path='/var/log/nginx/access.log'
 
 extracted_data_path=utils/normal_access_pattern_gen/crawl_logs
@@ -14,6 +12,7 @@ mkdir $extracted_data_path
 
 crawling_agent_ip=$1
 timestamp=$2
+output_sequences_path=$3
 
 folder_timestamp=$(date +%s)
 
