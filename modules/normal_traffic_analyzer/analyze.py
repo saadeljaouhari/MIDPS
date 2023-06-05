@@ -109,10 +109,23 @@ def compute_access_pattern(data_path,delta_time):
 
     return normal_access_sequences
 
+def strip_referrer_from_line(line):
+    return line.split(' ')[:-1]
+
+def delete_referrer_from_sequence(seq):
+    result=[]
+    for line in seq:
+        line = strip_referrer_from_line(line)
+        result.append(line)
+    return result
+
 def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
     matched_sequence = False
+    stripped_access_sequence = delete_referrer_from_sequence(access_sequence)
+
     for sequence in computed_norm_access_seq:
-        if sorted(access_sequence) == sorted(sequence):
+        sequence = delete_referrer_from_sequence(sequence)
+        if sorted(stripped_access_sequence) == sorted(sequence):
             matched_sequence = True
             break
     list_str = ','.join(access_sequence)
