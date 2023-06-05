@@ -151,5 +151,6 @@ if __name__=="__main__":
         computed_norm_access_seq = process_access_seq_file(normal_access_seq_file)
 
         for address in normal_access_sequences.keys():
-            th = threading.Thread(target=analyze_request_sequence, args=(address,normal_access_sequences[address],computed_norm_access_seq))
-            th.start()
+            for sequence in normal_access_sequences[address]:
+                th = threading.Thread(target=analyze_request_sequence, args=(address,sequence,computed_norm_access_seq))
+                th.start()
