@@ -6,7 +6,7 @@ log_file_path=$1
 
 log_folder_path=$log_file_path-frame
 
-norm_traffic_timeframe_size=3
+norm_traffic_timeframe_size=2
 
 script_command="analyze"
 
