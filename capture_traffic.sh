@@ -89,7 +89,7 @@ do
 	if [ $difference -ge $log_window_time ]; then
 
 	# extract all the logs created after the timestamp
-	awk -v d1="[$window_start_ts_formatted" '($4) >= d1' $log_file_path | grep -v "$crawling_agent_ip4|$crawling_agent_ip6" > $log_window_file_path
+	awk -v d1="[$window_start_ts_formatted" '($4) >= d1' $log_file_path | grep -vE "$crawling_agent_ip4|$crawling_agent_ip6" > $log_window_file_path
 
 	# Launch the traffic monitor
 	sh ./modules/normal_traffic_analyzer/analyze_traffic.sh $log_window_file_path

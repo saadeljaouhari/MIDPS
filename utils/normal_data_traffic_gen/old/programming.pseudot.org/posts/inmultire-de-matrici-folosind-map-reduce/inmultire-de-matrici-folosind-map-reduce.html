@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<!--  <title>MatrixMultiplication - MR</title>-->
+
+		<title>Pseudoprogramming</title>
+		<meta name="generator" content="https://github.com/EdJoPaTo/markdown-to-standalone-html 0.5.0" />
+
+		<link rel = "icon" href =
+			     "https://imgur.com/PIDOJFA.png" type = "image/x-icon">
+		<style>
+html, body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	line-height: 1.5;
+}
+
+	body {
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	p{
+		color: white;
+	}
+
+	.toc{
+	}
+
+	nav.toc ul {
+		padding: 0 0 0 10px;
+	}
+
+	nav.toc li {
+		overflow: hidden;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	@media screen and (min-width: 600px) {
+		nav.toc {
+			padding: 0;
+			align-items: flex-start;
+			top: 0;
+			bottom: 0;
+			overflow-x: hidden;
+			overflow-y: auto;
+			width: 60%;
+		}
+		main {
+			margin-left: 20px;
+		}
+	}
+
+	@media screen and (min-width: 1300px) {
+		body {
+			max-width: 1100px;
+		}
+		nav.toc {
+			width: 60%;
+		}
+		main {
+			margin-left: 20px;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	a, p code {
+		color: #00A;
+	}
+
+	code pre {
+		overflow: auto;
+	}
+	h1:not(.title){
+		color:white;
+	}
+	h2:not(.motto){
+
+		color: #6a83c7;
+	}
+	h3,h4,h5,h6{
+		color: #6a83c7;
+	}
+	li:not(.back){
+		color:rgb(255, 255, 255);
+	}
+	em{
+		colorrgb(255, 255, 255);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		html, body {
+			background: linear-gradient(#999900,black) fixed;
+		}
+		a, p code {
+
+			color: #0DD;
+		}
+	}
+
+	.title {
+		color: #fff;
+		padding-left: 2%;
+	}
+	.motto{
+		font-style: italic;
+		text-transform: lowercase;
+		color: #fff;
+		margin-bottom: 10%;
+		margin-right: 2%;
+		text-align: right;
+		font-size: 90%;
+	}
+	.network {
+		font: 90% "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+		text-transform: uppercase;
+		align-items: center;
+
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 5%;
+	}
+	.network li a:hover {
+		color: rgb(0, 0, 0);
+	}
+	.network li a:hover {
+		background-color: #ffffff;
+	}
+	.network li a {
+		display: block;
+		text-decoration: none;
+		min-height: 1.5em;
+		padding: 0 10px 0 40px;
+		border: none;
+		color: rgb(255, 255, 255);
+	}
+	.back a {
+		color: #d2d2c7;
+		text-decoration: underline;
+	}
+	.network li {
+		list-style-type: none;
+	}
+	.network li {
+		width: 10%;
+		list-style-type: none;
+		border-bottom: 1px dotted #fff;
+		background-color: #46516e;
+		margin-top: 2px;
+		margin-left: 0px;
+	}
+	.date {
+		position: absolute;
+		right: 5em;
+		padding-bottom: 2em;
+	}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1 class="title">Pseudoprogramming</h1>
+			<h2 class="motto"> Milli milli moi</h2>
+		</div>
+
+		<div class="container">
+			<nav class="toc">
+<ul>
+<li><a href="#matrixmultiplication-mr">MatrixMultiplication - MR</a>
+<ul>
+<li><a href="#sarcina-este-urm-toarea">Sarcina este următoarea:</a>
+<ul>
+
+<ul>
+
+<ul>
+
+<ul>
+<li><a href="#solu-ie-propus">Soluție propusă:</a></li>
+<li><a href="#utilizare">Utilizare:</a></li>
+<li><a href="#exemplu-rezultat">Exemplu rezultat:</a></li>
+<li><a href="#bibliografie-problema-2">Bibliografie problema 2:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav><main><h1 id="matrixmultiplication-mr">MatrixMultiplication - MR</h1><h2 id="sarcina-este-urm-toarea">Sarcina este următoarea:</h2>
+<p><code>Proiectati si implementati o solutie MapReduce pentru a înmulti doua matrice(patratice).</code></p>
+<h6 id="solu-ie-propus">Soluție propusă:</h6>
+<ul>
+<li>Fișierul de intrare conține pe fiecare rând informații ce descriu un rând al unei matrici
+(ex. M,0,0,63)</li>
+<li>În faza de mapare procesam fisierul de intrare pentru a obtine perechi de forma
+<strong>(i,k)(M,j,M_ij)</strong> (pentru matricea M) si <strong>(i,k),(N,j,N_jk)</strong> (pentru matricea N), unde:
+<ul>
+<li>i = nr de coloane din matricea M</li>
+<li>j = nr de coloane din M(si implicit nr de linii din N)</li>
+<li>k = nr de coloane din N</li>
+<li>M_ij/N_jk elementul din matrice aflat la indexul dat</li>
+</ul>
+</li>
+<li>Etapa de combinare este executata cu ajutorul functiei sort din linux și in urma acesteia
+tuplele generate in etapa de mapare pot fi procesate in functie de indecsii i,k.</li>
+<li>Etapa de reducere constă in următorii pasi:
+<ul>
+<li>Salvarea intr-o lista a tuturor valorilor din ambele matrici care au aceiasi cheie, sub forma de tuple
+care contin indexul si valoarea care se gaseste la o anumita cheie</li>
+<li>Calcularea sumei produselor elementelor cu aceiasi cheie(partea efectiva de calcul a produsului matricii)</li>
+<li>Pentru fiecare index din matricea reuzultat, returnarea cheii și valorii de interes.</li>
+</ul>
+</li>
+</ul>
+<h6 id="utilizare">Utilizare:</h6>
+<p>Pentru simplificarea procesului de rulare, este suficientă execuția unui script bash. Aceasta se poate realiza
+apelând următoarea comandă:</p>
+<pre><code><pre style="background-color:#2d2d2d;">
+<span style="color:#d3d0c8;">	sh run.sh
+</span></pre>
+</code></pre>
+<h6 id="exemplu-rezultat">Exemplu rezultat:</h6>
+<p><img src="./MatrixMulPy/matrix_mul_output.png" alt="MATRIX_MUL_OUTPUT" /></p>
+<h6 id="bibliografie-problema-2">Bibliografie problema 2:</h6>
+<p>https://github.com/amberm291/MatrixMultiplyMR</p>
+</main>
+		</div>
+
+		<p class="date" id="date"></p>
+
+		<div class="network">
+			<ul>
+				<li class=".back"><a class=".back" href="https://programming.pseudot.org">Back</a></li>
+			</ul>
+		</div>
+
+		<script>
+			const d= new Date(document.lastModified);
+			var datestring = d.getDate()  + "/" + (d.getMonth()+1) + "/" + d.getFullYear() + " ";
+			document.getElementById("date").innerHTML = datestring;
+		</script>
+	</body>
+
+</html>

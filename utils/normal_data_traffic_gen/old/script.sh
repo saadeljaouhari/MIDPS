@@ -16,10 +16,11 @@ do
 	selected_agent=$(shuf -n 1 $user_agent_path)
 	fi
 
-	sleeping_time=$(shuf -i 60-180 -n 1)
+#	sleeping_time=$(shuf -i 60-180 -n 1)
   	((count=count+1))
 	echo "Crawling over"
 	echo Will sleep $sleeping_time
 	echo Pages crawled $count
-	sleep $((sleeping_time))
+#	sleep $((sleeping_time))
+	sleep 2
 done
