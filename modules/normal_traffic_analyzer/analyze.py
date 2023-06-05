@@ -115,13 +115,12 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
         if sorted(access_sequence) == sorted(sequence):
             matched_sequence = True
             break
+    list_str = ','.join(access_sequence)
     if matched_sequence:
-        print("{} made a normal access. \n Access seq: {} ".format(address, ','.join(access_sequence) ))
+        print("{} made a normal access. \n Access seq: {} ".format(address, list_str ))
     else:
         # send the sequence to further analysis
-        print("{} made a suspect access. \n Access seq: {} ".format(address, ','.join(access_sequence)))
-
-
+        print("{} made a suspect access. \n Access seq: {} ".format(address, list_str)))
 
 
 if __name__=="__main__":
