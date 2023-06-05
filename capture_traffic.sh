@@ -6,6 +6,10 @@ log_file_path="/var/log/nginx/access.log"
 log_window_time=10
 interface_name='enp1s0'
 
+
+# the page crawling delay
+sleep_time_between_accesses=2
+
 crawling_agent_ip4=$(ifconfig $interface_name  | grep inet | head -n 1 |  awk '{print $2}' )
 crawling_agent_ip6=$(ifconfig $interface_name  | grep inet6 | head -n 1 |  awk '{print $2}' )
 
@@ -17,36 +21,19 @@ launch_agents() {
 
   crawling_agent_pid=$!
 
-  # de computat pe fundal access patternurile
-  # Run the normal traffic generator agent
-  #sh ./utils/normal_data_traffic_gen/gen_traffic.sh &
+  # Run the normal traffic pattern agent
+  sh ./utils/normal_access_pattern_gen/run_compute_access_patterns.sh &
 
-  #traffic_generator_agent_pid=$!
+  traffic_generator_agent_pid=$!
 
 }
+
 initialize_modules(){
-  # we generate the links to all the resources for further operations
-  # sa verific daca nu cumva exista deja un access pattern, de la alta operatie
 
-  web_pages_file_path="utils/gen_resource_links/web_pages"
-  output_links_file_path="modules/resources/web_page_links"
-  normal_sequences_path='modules/resources/normal_access_patterns'
-
+  # if a patternt hasnt been already generated from the previous runs start the process
   if [ ! -f $normal_sequences_path ]
   then
-  # the page crawling delay
-  sleep_time_between_accesses=2
-
-  # generate the web page resource links
-  sh utils/gen_resource_links/gen_resource_links.sh $web_pages_file_path $output_links_file_path
-  # we timestamp the begginning of the operation
-  # we wait one second of sync reasons
-  start_ts=$(date +"%d/%b/%Y:%H:%M:%S")
-  # before starting to analyze traffic we need to crawl the web app at least once
-  # we check the existence of the file structure tree file
-  # Run the normal traffic generator agent
-  sh ./utils/normal_data_traffic_gen/gen_traffic.sh $output_links_file_path $sleep_time_between_accesses
-  sh ./utils/normal_access_pattern_gen/compute_patterns.sh $crawling_agent_ip6 $start_ts
+	  sh ./utils/normal_access_pattern_gen/run_compute_access_patterns.sh
   fi
 
 }
