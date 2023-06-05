@@ -1,6 +1,7 @@
 #!/bin/sh
 
 tmp_log_path="/tmp/logs"
+log_file_path="/var/log/nginx/access.log"
 # divide logs into x seconds windows
 log_window_time=10
 interface_name='enp1s0'
@@ -74,43 +75,31 @@ launch_agents
 mkdir $tmp_log_path/
 
 window_start_ts=$(date +%s)
+window_start_ts_formatted=$(date +"%d/%b/%Y:%H:%M:%S")
 
-# sa vad cum sa fac sa ignor ipurile de la interfetele mele pt logat
 log_window_file_path=$tmp_log_path/$window_start_ts
 touch $log_window_file_path
-#Input each line to the modules
-while read line; do
 
-	#Check if the line contains one of the local agents ip so we can ignore it
-	contains_local_ip=$(echo $line | grep -E "$crawling_agent_ip4|$crawling_agent_ip6" | wc -l )
-	if [ $contains_local_ip -ne 0 ]; then
-		continue
-	fi
-	# File disclosure
+while true
+do
 	current_timestamp=$(date +%s)
 	difference=$((current_timestamp-window_start_ts))
 
 	if [ $difference -ge $log_window_time ]; then
-		# saving the last line
-		echo $line >> $log_window_file_path
 
-		# launch normal traffic monitor
-		sh ./modules/normal_traffic_analyzer/analyze_traffic.sh $log_window_file_path
+	# extract all the logs created after the timestamp
+	awk -v d1="[$window_start_ts_formatted" '($4) >= d1' $log_file_path | grep -v "$crawling_agent_ip4|$crawling_agent_ip6" > $log_window_file_path
 
-		# based on the normal traffic monitor launch the other modules
+	# Launch the traffic monitor
+	sh ./modules/normal_traffic_analyzer/analyze_traffic.sh $log_window_file_path
 
-		# updating the timestamp
-		window_start_ts=$current_timestamp
+	## update the timestamps
+	window_start_ts=$current_timestamp
 
-		# Create update the log window file path
-		log_window_file_path=$tmp_log_path/$current_timestamp
+	current_ts_formatted=$(date +"%d/%b/%Y:%H:%M:%S" -d "$current_timestamp")
+	window_start_ts_formatted=$current_ts_formatted
 
-	else
-		echo $line >> $log_window_file_path
+	## Create update the log window file path
+	log_window_file_path=$tmp_log_path/$current_timestamp
 	fi
-
-#	echo "$line" | sh ./modules/file_disclosure/script.sh
-
-	# test
-#	echo "$line" | sh ./modules/ddos/script.sh
 done
