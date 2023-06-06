@@ -25,4 +25,4 @@ if __name__=="__main__":
 
         result=findall(tree, filter_=lambda node: node.name == resource)
         if len(result)==0:
-            print('{} attempted a file disclosure'.format(address))
+            print('{} attempted a file disclosure. Requested resource: {}'.format(address,resource))
