@@ -110,7 +110,7 @@ def compute_access_pattern(data_path,delta_time):
     return normal_access_sequences
 
 def strip_timestamp_referrer_from_line(line):
-    return line.split(' ')[1:-1]
+    return line.split(' ')[2:-1]
 
 def delete_timestamp_referrer_from_sequence(seq):
     result=[]
