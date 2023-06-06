@@ -25,7 +25,7 @@ def extract_time_diff(t0,t1):
     return time_difference
 
 
-def compute_request_rate(file_path,,delta_time):
+def compute_request_rate(file_path,delta_time):
 
 
     request_rate= {}
