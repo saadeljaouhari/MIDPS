@@ -8,14 +8,12 @@ from datetime import datetime
 
 
 def extract_time_diff(t0,t1):
-    timestamp_format = "%d/%b/%Y:%H:%M:%S %z"
-    timestamp_pattern = r'(.*?)'
+    timestamp_info_1=t0.split(' ')[:2]
+    timestamp1=' '.join(timestamp_info_1)
 
-    match = re.search(timestamp_pattern, t0)
-    timestamp1=match.group(1)
 
-    match = re.search(timestamp_pattern, t1)
-    timestamp2=match.group(1)
+    timestamp_info_2=t1.split(' ')[:2]
+    timestamp2 = ' '.join(timestamp_info_2)
 
     datetime1 = datetime.strptime(timestamp1, timestamp_format)
     datetime2 = datetime.strptime(timestamp2, timestamp_format)
