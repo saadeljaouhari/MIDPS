@@ -26,7 +26,7 @@ def append_data_in_array(line,timestamp,arr):
             referrer = data[10]
         else:
             referrer = '"-"'
-        arr.append("{} {} {} {}".format(method, resource, answer,referrer))
+        arr.append("{} {} {} {} {}".format(timestamp,method, resource, answer,referrer))
 
         return arr
 
@@ -109,19 +109,19 @@ def compute_access_pattern(data_path,delta_time):
 
     return normal_access_sequences
 
-def strip_referrer_from_line(line):
-    return line.split(' ')[:-1]
+def strip_timestamp_referrer_from_line(line):
+    return line.split(' ')[1:-1]
 
-def delete_referrer_from_sequence(seq):
+def delete_timestamp_referrer_from_sequence(seq):
     result=[]
     for line in seq:
-        line = strip_referrer_from_line(line)
+        line = strip_timestamp_referrer_from_line(line)
         result.append(line)
     return result
 
 def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
     matched_sequence = False
-    stripped_access_sequence = delete_referrer_from_sequence(access_sequence)
+    stripped_access_sequence = delete_timestamp_referrer_from_sequence(access_sequence)
 
     for sequence in computed_norm_access_seq:
         sequence = delete_referrer_from_sequence(sequence)
