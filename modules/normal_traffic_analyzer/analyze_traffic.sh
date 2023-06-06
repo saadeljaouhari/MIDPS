@@ -31,7 +31,7 @@ suspect_frame_path=$suspect_traffic_folder_path/$frame_name
 if [ -d $suspect_frame_path ]
 then
 for file in "$suspect_frame_path"/*; do
-  echo "$file"
+	sh modules/file_disclosure/perform_file_disclosure_detection.sh $file
 done
 
 fi
