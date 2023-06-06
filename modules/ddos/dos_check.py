@@ -62,7 +62,7 @@ def compute_request_rate(file_path,delta_time):
 
             time_diff = extract_time_diff(first_line,last_line)
             # the request rate metric is time_diff divided by total_no_req
-            request_rate[request_index]={count:time_diff}
+            request_rate[request_index]={count:time_diff.total_seconds()}
 
             count=0
             request_index = request_index + 1
