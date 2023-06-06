@@ -9,6 +9,9 @@ new_sequences_file_path='utils/normal_access_pattern_gen/normal_access_patterns'
 # the page crawling delay
 sleep_time_between_accesses=2
 
+# the ip for the extraction
+crawling_agent_ip6=$1
+
 # generate the web page resource links
 sh utils/gen_resource_links/gen_resource_links.sh $web_pages_file_path $output_links_file_path
 # we timestamp the begginning of the operation

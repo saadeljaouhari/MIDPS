@@ -24,7 +24,7 @@ launch_agents() {
   crawling_agent_pid=$!
 
   # Run the normal traffic pattern agent
-  sh ./utils/normal_access_pattern_gen/run_pattern_agent.sh &
+  sh ./utils/normal_access_pattern_gen/run_pattern_agent.sh $crawling_agent_ip6 &
 
   traffic_generator_agent_pid=$!
 
@@ -35,7 +35,7 @@ initialize_modules(){
   # if a patternt hasnt been already generated from the previous runs start the process
   if [ ! -f $normal_sequences_path ]
   then
-	  sh ./utils/normal_access_pattern_gen/run_compute_access_patterns.sh
+	  sh ./utils/normal_access_pattern_gen/run_compute_access_patterns.sh $crawling_agent_ip6
   fi
 
 }
