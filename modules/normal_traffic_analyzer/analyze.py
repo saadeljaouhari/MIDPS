@@ -124,7 +124,7 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
     stripped_access_sequence = delete_timestamp_referrer_from_sequence(access_sequence)
 
     for sequence in computed_norm_access_seq:
-        sequence = delete_referrer_from_sequence(sequence)
+        sequence = delete_timestamp_referrer_from_sequence(sequence)
         if sorted(stripped_access_sequence) == sorted(sequence):
             matched_sequence = True
             break
