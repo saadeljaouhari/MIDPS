@@ -8,6 +8,9 @@ from datetime import datetime
 
 
 def extract_time_diff(t0,t1):
+
+    timestamp_format = "%d/%b/%Y:%H:%M:%S %z"
+
     timestamp_info_1=t0.split(' ')[:2]
     timestamp1=' '.join(timestamp_info_1)
 
