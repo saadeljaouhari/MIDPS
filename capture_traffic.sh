@@ -17,12 +17,12 @@ launch_agents() {
   echo "Launching crawling agents"
 
   # Run the crawling agent
-  sh ./utils/crawling_agent/run_crawling_agent.sh &
+  sh ./utils/crawling_agent/run_fs_agent.sh &
 
   crawling_agent_pid=$!
 
   # Run the normal traffic pattern agent
-  sh ./utils/normal_access_pattern_gen/run_compute_access_patterns.sh &
+  sh ./utils/normal_access_pattern_gen/run_pattern_agent.sh &
 
   traffic_generator_agent_pid=$!
 
