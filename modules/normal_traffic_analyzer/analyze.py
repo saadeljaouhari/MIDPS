@@ -131,7 +131,7 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
     list_str = ','.join(access_sequence)
     if not matched_sequence:
         # send the sequence to further analysis
-        frame_name=log_folder_path.split('/')[:-1]
+        frame_name=log_folder_path.split('/')[-1]
         frame_folder_path='{}/{}'.format(suspect_traffic_folder_path,frame_name)
         if not os.path.exists(frame_folder_path):
             os.makedirs(frame_folder_path)
