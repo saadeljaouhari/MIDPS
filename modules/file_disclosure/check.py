@@ -20,8 +20,8 @@ if __name__=="__main__":
     address = sys.argv[1]
     for line in sys.stdin:
 
-        resource = line.split(' ')[0]
-        referrer = line.split(' ')[1]
+        resource = line.split(' ')[3]
+        referrer = line.split(' ')[5]
 
         result=findall(tree, filter_=lambda node: node.name == resource)
         if len(result)==0:
