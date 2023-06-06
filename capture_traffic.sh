@@ -6,6 +6,8 @@ log_file_path="/var/log/nginx/access.log"
 log_window_time=10
 interface_name='enp1s0'
 
+# the acceess sequence file path
+normal_sequences_path="modules/resources/normal_acces_patterns"
 
 # the page crawling delay
 sleep_time_between_accesses=2
