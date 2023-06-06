@@ -63,11 +63,15 @@ echo "Launching the app agents"
 launch_agents
 
 mkdir $tmp_log_path/
+# make the directory for the data frames
+data_frames_path=$tmp_log_path/frames
+mkdir $data_frames_path
+
 
 window_start_ts=$(date +%s)
 window_start_ts_formatted=$(date +"%d/%b/%Y:%H:%M:%S")
 
-log_window_file_path=$tmp_log_path/$window_start_ts
+log_window_file_path=$data_frames_path/$window_start_ts
 touch $log_window_file_path
 
 while true
