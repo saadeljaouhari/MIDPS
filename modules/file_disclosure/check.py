@@ -20,7 +20,7 @@ if __name__=="__main__":
     address = sys.argv[1]
     for line in sys.stdin:
     # in some cases, especially in malware injection the request length is not standard
-        if len(line.split(' ')) != 6:
+        if len(line.split(' ')) != 5:
             resource = line.split(' ')[3]
             referrer = line.split(' ')[5]
 

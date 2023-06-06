@@ -9,7 +9,7 @@ from datetime import datetime
 
 def extract_time_diff(t0,t1):
     timestamp_format = "%d/%b/%Y:%H:%M:%S %z"
-    timestamp_pattern = r'\(.*?)\'
+    timestamp_pattern = r'\(.*?)\''
 
     match = re.search(timestamp_pattern, t0)
     timestamp1=match.group(1)
