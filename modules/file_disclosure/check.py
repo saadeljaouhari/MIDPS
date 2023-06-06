@@ -17,9 +17,12 @@ def load_tree(file_name):
 
 if __name__=="__main__":
     tree = load_tree(file_name)
+    address = sys.argv[1]
     for line in sys.stdin:
 
         resource = line.split(' ')[0]
         referrer = line.split(' ')[1]
 
-        print(findall(tree, filter_=lambda node: node.name == resource))
+        result=findall(tree, filter_=lambda node: node.name == resource)
+        if len(result)==0:
+            print('{} attempted a file disclosure'.format(address))
