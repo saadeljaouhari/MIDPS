@@ -128,7 +128,7 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
         if sorted(stripped_access_sequence) == sorted(sequence):
             matched_sequence = True
             break
-    list_str = ','.join(access_sequence)
+    list_str = '\n'.join(access_sequence)
     if not matched_sequence:
         # send the sequence to further analysis
         frame_name=log_folder_path.split('/')[-1]
