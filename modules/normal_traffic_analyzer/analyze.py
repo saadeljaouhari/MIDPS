@@ -131,9 +131,11 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
     list_str = ','.join(access_sequence)
     if not matched_sequence:
         # send the sequence to further analysis
-        print("{} made a suspect access. \n Access seq: {} ".format(address, list_str))
+        file_path='{}/{}'.format(suspect_traffic_folder_path,address)
+        with open(file_path,"a+") as f:
+            f.write(list_str)
+            f.write("\n")
     else:
-
         print("{} made a normal access. \n Access seq: {} ".format(address, list_str ))
 
 
@@ -144,6 +146,8 @@ if __name__=="__main__":
     log_folder_path=sys.argv[2]
 
     delta_time=sys.argv[3]
+
+    suspect_traffic_folder_path="/tmp/logs/suspect_traffic"
 
     normal_access_sequences = compute_access_pattern(log_folder_path,delta_time)
     # switch on the commands
