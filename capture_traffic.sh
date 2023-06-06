@@ -94,6 +94,6 @@ do
 	window_start_ts_formatted=$current_ts_formatted
 
 	## Create update the log window file path
-	log_window_file_path=$tmp_log_path/$current_timestamp
+	log_window_file_path=$data_frames_path/$current_timestamp
 	fi
 done
