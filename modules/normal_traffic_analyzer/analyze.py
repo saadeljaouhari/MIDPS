@@ -109,23 +109,41 @@ def compute_access_pattern(data_path,delta_time):
 
     return normal_access_sequences
 
-def strip_timestamp_referrer_from_line(line):
-    return line.split(' ')[2:-1]
+def strip_timestamp_referrer_code_from_line(line):
+    return line.split(' ')[2:-2]
 
-def delete_timestamp_referrer_from_sequence(seq):
+def delete_timestamp_referrer_code_from_sequence(seq):
     result=[]
     for line in seq:
-        line = strip_timestamp_referrer_from_line(line)
-        result.append(line)
+        line = strip_timestamp_referrer_code_from_line(line)
+        # excluding the favicon resource
+        if "/favicon.ico" not in line:
+            result.append(line)
     return result
 
-def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
-    matched_sequence = False
-    stripped_access_sequence = delete_timestamp_referrer_from_sequence(access_sequence)
+def convert_seq_to_string(sequence,delim=' '):
+        result=''
+        for item in sequence:
+            result+=delim.join(item)
+            result+="\n"
+        return result[:-1]
 
-    for sequence in computed_norm_access_seq:
-        sequence = delete_timestamp_referrer_from_sequence(sequence)
-        if sorted(stripped_access_sequence) == sorted(sequence):
+
+def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
+    
+    print(access_sequence)
+    if len(access_sequence) == 1 and "/favicon.ico" in access_sequence[0]:
+        # if the request is only for one favico then we assume this is a normal access sequence
+        return True
+
+    matched_sequence = False
+    stripped_access_sequence = sorted(delete_timestamp_referrer_code_from_sequence(access_sequence))
+    stripped_access_seq_string = convert_seq_to_string(stripped_access_sequence)
+
+    for norm_sequence in computed_norm_access_seq:
+        norm_sequence = sorted(delete_timestamp_referrer_code_from_sequence(norm_sequence))
+        norm_sequence_string = convert_seq_to_string(norm_sequence)
+        if stripped_access_seq_string in norm_sequence_string:
             matched_sequence = True
             break
     list_str = '\n'.join(access_sequence)
@@ -139,9 +157,11 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
         with open(sequence_file_path,"a+") as f:
             f.write(list_str)
             f.write("\n")
+        return matched_sequence
     else:
         print("{} made a normal access. \n Access seq: {} ".format(address, list_str ))
-
+        return matched_sequence
+    
 
 if __name__=="__main__":
 
