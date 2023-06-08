@@ -130,8 +130,7 @@ def convert_seq_to_string(sequence,delim=' '):
 
 
 def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
-    
-    print(access_sequence)
+
     if len(access_sequence) == 1 and "/favicon.ico" in access_sequence[0]:
         # if the request is only for one favico then we assume this is a normal access sequence
         return True
@@ -157,11 +156,12 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
         with open(sequence_file_path,"a+") as f:
             f.write(list_str)
             f.write("\n")
+        print("{} made a bizarre access. \n Access seq: {} ".format(address, list_str ))
         return matched_sequence
     else:
         print("{} made a normal access. \n Access seq: {} ".format(address, list_str ))
         return matched_sequence
-    
+
 
 if __name__=="__main__":
 

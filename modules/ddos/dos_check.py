@@ -89,6 +89,4 @@ if __name__=="__main__":
     address = file_path.split('/')[-1]
 
     request_rate = compute_request_rate(file_path,delta_time)
-    pprint(request_rate)
-    # switch on the commands
-    # export the computed access patterns
+    print(request_rate)
