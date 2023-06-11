@@ -136,11 +136,11 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
         return True
 
     matched_sequence = False
-    stripped_access_sequence = sorted(delete_timestamp_referrer_code_from_sequence(access_sequence))
+    stripped_access_sequence = delete_timestamp_referrer_code_from_sequence(access_sequence)
     stripped_access_seq_string = convert_seq_to_string(stripped_access_sequence)
 
     for norm_sequence in computed_norm_access_seq:
-        norm_sequence = sorted(delete_timestamp_referrer_code_from_sequence(norm_sequence))
+        norm_sequence = delete_timestamp_referrer_code_from_sequence(norm_sequence)
         norm_sequence_string = convert_seq_to_string(norm_sequence)
         if stripped_access_seq_string in norm_sequence_string:
             matched_sequence = True
