@@ -128,6 +128,24 @@ def convert_seq_to_string(sequence,delim=' '):
             result+="\n"
         return result[:-1]
 
+def contains_subsequence(seq,subseq):
+
+    seq_len = len(seq)
+    subseq_len = len(subseq)
+
+    seq_index = 0
+    subseq_index = 0
+
+    while seq_index < seq_len:
+        if subseq[subseq_index] == seq[seq_index]:
+            subseq_index += 1
+
+            if subseq_index == subseq_len:
+                return True
+
+        seq_index += 1
+
+    return False
 
 def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
 
@@ -137,12 +155,12 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
 
     matched_sequence = False
     stripped_access_sequence = delete_timestamp_referrer_code_from_sequence(access_sequence)
-    stripped_access_seq_string = convert_seq_to_string(stripped_access_sequence)
+    stripped_access_sequence = sorted(stripped_access_sequence)
 
     for norm_sequence in computed_norm_access_seq:
         norm_sequence = delete_timestamp_referrer_code_from_sequence(norm_sequence)
-        norm_sequence_string = convert_seq_to_string(norm_sequence)
-        if stripped_access_seq_string in norm_sequence_string:
+        norm_sequence = sorted(norm_sequence)
+        if contains_subsequence(norm_sequence,stripped_access_sequence):
             matched_sequence = True
             break
     list_str = '\n'.join(access_sequence)
