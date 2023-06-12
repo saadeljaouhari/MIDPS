@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-web_pages_file_path="utils/gen_resource_links/web_pages"
+web_pages_file_path="modules/resources/web_pages"
 output_links_file_path="modules/resources/web_page_links"
 old_sequences_file_path='modules/resources/normal_access_patterns'
 new_sequences_file_path='utils/normal_access_pattern_gen/normal_access_patterns'

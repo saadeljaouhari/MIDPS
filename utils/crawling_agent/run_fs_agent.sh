@@ -4,7 +4,7 @@
 old_fs_graph_path="modules/resources/web_structure_tree"
 new_fs_graph_path="utils/server_structure_graph/web_structure_tree"
 
-links_file_path="utils/gen_resource_links/web_pages"
+links_file_path="modules/resources/web_pages"
 output_links_file_path="modules/resources/web_page_links"
 
 log_file_path='/var/log/nginx/access.log'
