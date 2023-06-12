@@ -41,6 +41,8 @@ def compute_request_rate(file_path,delta_time):
     t1=''
 
     for line in lines:
+        if line == '\n':
+            continue
 
         # first line
         if t0=='':
