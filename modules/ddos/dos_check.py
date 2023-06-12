@@ -28,7 +28,6 @@ def extract_time_diff(t0,t1):
 
 def compute_request_rate(file_path,delta_time):
 
-
     request_rate= {}
 
     delta_time=float(delta_time)
@@ -78,6 +77,17 @@ def compute_request_rate(file_path,delta_time):
     return request_rate
 
 
+def check_request_rate(request_rate_dict,longest_seq_len,ratio_multiplying_factor):
+    # check if the number of requests surpass the ratio*max_seq_len
+    rate_exceeding_threshold=False
+    for seq_index in request_rate_dict.keys():
+        if len(request_rate_dict)>longest_seq_len*ratio_multiplying_factor:
+            rate_exceeding_threshold=True
+            break
+    return rate_exceeding_threshold
+
+
+
 
 # ros = 100
 
@@ -87,7 +97,17 @@ if __name__=="__main__":
 
     delta_time=sys.argv[2]
 
+    longest_seq_len=int(sys.argv[3])
+
+    ratio_multiplying_factor=int(sys.argv[4])
+
     address = file_path.split('/')[-1]
 
-    request_rate = compute_request_rate(file_path,delta_time)
-    print(request_rate)
+    request_rate_dict = compute_request_rate(file_path,delta_time)
+
+    rate_exceeding_threshold=check_request_rate(request_rate_dict,longest_seq_len,ratio_multiplying_factor)
+
+    if rate_exceeding_threshold:
+        print('{} made a bizarre access. Request rate: {}'.format(address,request_rate_dict))
+    else:
+        print('{} made a normal access. Request rate: {}'.format(address,request_rate_dict))
