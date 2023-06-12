@@ -31,8 +31,9 @@ suspect_frame_path=$suspect_traffic_folder_path/$frame_name
 if [ -d $suspect_frame_path ]
 then
 for file in "$suspect_frame_path"/*; do
-	sh modules/file_disclosure/perform_file_disclosure_detection.sh $file &
-	sh modules/ddos/perform_dos_detection.sh $file $norm_traffic_timeframe_size &
+	sh modules/ddos/perform_dos_detection.sh $file $norm_traffic_timeframe_size
+
+	sh modules/file_disclosure/perform_file_disclosure_detection.sh $file
 done
 
 fi

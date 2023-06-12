@@ -1,6 +1,5 @@
 import os
 import sys
-import pprint
 import re
 import json
 import threading
@@ -109,5 +108,3 @@ if __name__=="__main__":
 
     if rate_exceeding_threshold:
         print('{} made a bizarre access. Request rate: {}'.format(address,request_rate_dict))
-    else:
-        print('{} made a normal access. Request rate: {}'.format(address,request_rate_dict))
