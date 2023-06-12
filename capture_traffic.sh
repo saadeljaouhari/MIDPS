@@ -68,6 +68,8 @@ data_frames_path=$tmp_log_path/frames
 mkdir $data_frames_path
 # make the directory for the suspect traffic
 mkdir $tmp_log_path/suspect_traffic
+# make the directory for the verdicts traffic
+mkdir $tmp_log_path/verdicts
 
 
 window_start_ts=$(date +%s)

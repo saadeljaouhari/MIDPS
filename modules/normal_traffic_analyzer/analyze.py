@@ -1,6 +1,5 @@
 import os
 import sys
-import pprint
 import re
 import json
 import threading
@@ -174,11 +173,7 @@ def analyze_request_sequence(address,access_sequence,computed_norm_access_seq):
         with open(sequence_file_path,"a+") as f:
             f.write(list_str)
             f.write("\n")
-        print("{} made a bizarre access. \n Access seq: {} ".format(address, list_str ))
-        return matched_sequence
-    else:
-        print("{} made a normal access. \n Access seq: {} ".format(address, list_str ))
-        return matched_sequence
+    return matched_sequence
 
 
 if __name__=="__main__":
@@ -195,7 +190,6 @@ if __name__=="__main__":
     # switch on the commands
     # export the computed access patterns
     if command == "export":
-        #pprint.pprint(normal_access_sequence)
         output_path = sys.argv[4]
         if output_path is not None:
             with open(output_path,"w+") as file:
