@@ -1,7 +1,7 @@
 #!/bin/bash
 
-filename=$1
 max_count=0
+filename=$1
 
 while IFS= read -r line
 do
