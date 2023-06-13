@@ -108,12 +108,6 @@ if __name__=="__main__":
 
     frame_folder_path='{}/{}'.format(verdict_folder_path,frame_name)
 
-    if not os.path.exists(frame_folder_path):
-
-        os.makedirs(frame_folder_path)
-
-
-
     address = file_path.split('/')[-1]
 
     request_rate_dict = compute_request_rate(file_path,delta_time)
@@ -121,6 +115,10 @@ if __name__=="__main__":
     rate_exceeding_threshold=check_request_rate(request_rate_dict,longest_seq_len,ratio_multiplying_factor)
 
     if rate_exceeding_threshold:
+
+        if not os.path.exists(frame_folder_path):
+
+            os.makedirs(frame_folder_path)
 
         verdict_file_path='{}/{}'.format(frame_folder_path,address)
         with open(verdict_file_path,"a+") as f:
