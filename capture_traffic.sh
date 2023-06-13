@@ -9,6 +9,9 @@ interface_name='enp1s0'
 # the acceess sequence file path
 normal_sequences_path="modules/resources/normal_access_patterns"
 
+# the fail2ban jail file path
+jail_file_path="/etc/fail2ban/jail.conf"
+
 # the page crawling delay
 sleep_time_between_accesses=2
 
@@ -31,6 +34,32 @@ launch_agents() {
 }
 
 initialize_modules(){
+   # add jail rule and create fail2ban_logfile
+
+   touch /var/log/fail2ban-aml.log
+
+   jail_exists=$( grep "aml-jail" /etc/fail2ban/jail.conf | wc -l)
+
+   # if the jail doesnt exist
+   if [ $jail_exists -eq 0 ]
+   then
+	echo -n '
+	[aml-jail]
+	enabled = true
+	#initial ban time:
+	bantime = 1m
+	# incremental banning:
+	bantime.increment = true
+	# max banning time = 5 weeks:
+	bantime.maxtime = 5w
+	logpath = /var/log/fail2ban-aml.log
+	' >> $jail_file_path
+
+   fi
+   # restart the fail2ban service
+   systemctl restart fail2ban
+
+
 
   # if a patternt hasnt been already generated from the previous runs start the process
   if [ ! -f $normal_sequences_path ]
