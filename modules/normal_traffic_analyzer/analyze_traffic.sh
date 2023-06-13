@@ -38,11 +38,13 @@ for file in "$suspect_frame_path"/*; do
 # Before running a module, we check if the previous one has detected anomalies
 if [ ! -d $verdicts_folder_path/$frame_name ]
 then
+	echo
 	#sh modules/file_disclosure/perform_file_disclosure_detection.sh $file
 fi
 
 if [ ! -d $verdicts_folder_path/$frame_name ]
 then
+	echo
 	#sh modules/sqli/perform_sqli_check.sh $file
 fi
 
@@ -51,7 +53,7 @@ done
 # taking action on the verdicts
 if [  -d $verdicts_folder_path/$frame_name ]
 then
-	sh utils/ban_suspicious_activities/perform_file_disclosure_detection.sh $file
+	sh utils/ban_suspicious_activities/apply_ban.sh $verdicts_folder_path/$frame_name
 fi
 
 fi
