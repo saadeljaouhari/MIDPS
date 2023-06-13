@@ -44,16 +44,16 @@ initialize_modules(){
    if [ $jail_exists -eq 0 ]
    then
 	echo -n '
-	[aml-jail]
-	enabled = true
-	#initial ban time:
-	bantime = 1m
-	# incremental banning:
-	bantime.increment = true
-	# max banning time = 5 weeks:
-	bantime.maxtime = 5w
-	logpath = /var/log/fail2ban-aml.log
-	' >> $jail_file_path
+[aml-jail]
+enabled = true
+#initial ban time:
+bantime = 1m
+# incremental banning:
+bantime.increment = true
+# max banning time = 5 weeks:
+bantime.maxtime = 5w
+logpath = /var/log/fail2ban-aml.log
+' >> $jail_file_path
 
    fi
    # restart the fail2ban service
