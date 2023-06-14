@@ -8,7 +8,7 @@ while read line; do
 	# if the script detects a file disclosure
 	if [ $verdict -eq "1"]
 	then
-		frame_name=$(basename($dirname $file_path))
+		frame_name=$(basename "$(dirname "$file_path")")
 		verdict_file_path=$verdicts_folder_path/$frame_name/$address
 		echo "$address POSSIBLE FILE DISCLOSURE" > $verdict_file_path
 	fi
