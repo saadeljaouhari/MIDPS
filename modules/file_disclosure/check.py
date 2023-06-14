@@ -35,3 +35,4 @@ if __name__=="__main__":
     tree = load_tree(file_name)
     address = sys.argv[1]
     for line in sys.stdin:
+        check_file_disclosure(line)
