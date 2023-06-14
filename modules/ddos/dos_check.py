@@ -123,3 +123,4 @@ if __name__=="__main__":
         verdict_file_path='{}/{}'.format(frame_folder_path,address)
         with open(verdict_file_path,"a+") as f:
             f.write('{} - POSSIBLE DOS\n'.format(address))
+            #print('{} - POSSIBLE DOS\n'.format(address))
