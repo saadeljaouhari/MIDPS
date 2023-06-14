@@ -24,11 +24,12 @@ def check_file_disclosure(line):
         result=findall(tree, filter_=lambda node: node.name == resource)
         if len(result)==0:
             #print('{} attempted a file disclosure. Requested resource: {}'.format(address,resource))
-            return True
+            print("1")
         else:
-            return False
+            print("0")
     else:
             #print('{} attempted a file disclosure. The request has an irregular format'.format(address))
+            print("1")
             return True
 
 if __name__=="__main__":
