@@ -40,7 +40,7 @@ initialize_jail_env() {
   fi
 
     # add jail rule and create fail2ban_logfile
-
+    touch /var/log/fail2ban-aml.log
     touch /etc/fail2ban/filter.d/manban.conf
 
     jail_exists=$( grep "aml-jail" /etc/fail2ban/jail.conf | wc -l)
