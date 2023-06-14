@@ -29,7 +29,7 @@ launch_agents() {
   traffic_generator_agent_pid=$!
 
 }
-initialize_jail_env(){
+initialize_jail_env() {
 
   # deciding which is goning to be the fail2ban jail file path
   if [ -f "/etc/fail2ban/jail.local" ]
@@ -37,6 +37,7 @@ initialize_jail_env(){
     jail_file_path="/etc/fail2ban/jail.local"
   else
     jail_file_path="/etc/fail2ban/jail.conf"
+  fi
 
     # add jail rule and create fail2ban_logfile
 
@@ -71,8 +72,6 @@ ignoreregex=
     systemctl restart fail2ban
 
     fi
-
-
 }
 
 initialize_modules(){
