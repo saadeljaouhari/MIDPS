@@ -9,9 +9,6 @@ interface_name='enp1s0'
 # the acceess sequence file path
 normal_sequences_path="modules/resources/normal_access_patterns"
 
-# the fail2ban jail file path
-jail_file_path="/etc/fail2ban/jail.conf"
-
 # the page crawling delay
 sleep_time_between_accesses=2
 
@@ -32,20 +29,29 @@ launch_agents() {
   traffic_generator_agent_pid=$!
 
 }
+initialize_jail_env(){
 
-initialize_modules(){
-   # add jail rule and create fail2ban_logfile
+  # deciding which is goning to be the fail2ban jail file path
+  if [ -f "/etc/fail2ban/jail.local" ]
+  then
+    jail_file_path="/etc/fail2ban/jail.local"
+  else
+    jail_file_path="/etc/fail2ban/jail.conf"
 
-   touch /var/log/fail2ban-aml.log
+    # add jail rule and create fail2ban_logfile
 
-   jail_exists=$( grep "aml-jail" /etc/fail2ban/jail.conf | wc -l)
+    touch /etc/fail2ban/filter.d/manban.conf
 
-   # if the jail doesnt exist
-   if [ $jail_exists -eq 0 ]
-   then
-	echo -n '
+    jail_exists=$( grep "aml-jail" /etc/fail2ban/jail.conf | wc -l)
+
+    # if the jail doesnt exist
+    if [ $jail_exists -eq 0 ]
+    then
+	    echo -n '
 [aml-jail]
 enabled = true
+#filter
+filter=manban
 #initial ban time:
 bantime = 1m
 # incremental banning:
@@ -55,11 +61,23 @@ bantime.maxtime = 5w
 logpath = /var/log/fail2ban-aml.log
 ' >> $jail_file_path
 
-   fi
-   # restart the fail2ban service
-   systemctl restart fail2ban
+echo -n '
+[Definition]
+failregex=
+ignoreregex=
+' > /etc/fail2ban/filter.d/manban.conf
+
+    # restart the fail2ban service
+    systemctl restart fail2ban
+
+    fi
 
 
+}
+
+initialize_modules(){
+
+  initialize_jail_env
 
   # if a patternt hasnt been already generated from the previous runs start the process
   if [ ! -f $normal_sequences_path ]

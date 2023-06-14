@@ -47,7 +47,6 @@ then
 	echo
 	#sh modules/sqli/perform_sqli_check.sh $file
 fi
-
 done
 
 # taking action on the verdicts
