@@ -1,7 +1,8 @@
 #!/bin/sh
 
+model_file_path="modules/resources/sqli_model.h5"
+vocabulary_file_path="modules/resources/sqli_vocabulary.pkl"
 file_path=$1
 address=$(basename $file_path)
-while read line; do
-	echo $line | python3 modules/file_disclosure/check.py $address
-done < $file_path
+
+python3 modules/sqli/sqli_check.py $address $model_file_path $vocabulary_file_path
