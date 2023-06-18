@@ -5,7 +5,6 @@ from anytree.exporter import DotExporter
 from anytree import Node, RenderTree
 import json
 
-file_name = "modules/resources/web_structure_tree"
 
 def load_tree(file_name):
     f = open(file_name,"r")
@@ -32,7 +31,8 @@ def check_file_disclosure(line):
             print("1")
 
 if __name__=="__main__":
-    tree = load_tree(file_name)
     address = sys.argv[1]
+    web_structure_file_path = sys.argv[2]
+    tree = load_tree(web_structure_file_path)
     for line in sys.stdin:
         check_file_disclosure(line)

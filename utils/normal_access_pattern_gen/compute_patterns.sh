@@ -1,10 +1,10 @@
 #!/bin/sh
 
+source config.conf
+
 crawl_log_timeframe=1
 
 analyzing_script_command="export"
-
-log_file_path='/var/log/nginx/access.log'
 
 extracted_data_path="utils/normal_access_pattern_gen/crawl_logs"
 rm -rf $extracted_data_path

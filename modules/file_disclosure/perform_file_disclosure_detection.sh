@@ -1,10 +1,12 @@
 #!/bin/sh
 
+source config.conf
+
 file_path=$1
-verdicts_folder_path='/tmp/logs/verdicts'
 address=$(basename $file_path)
+
 while read line; do
-	verdict=$(echo $line | python3 modules/file_disclosure/check.py $address)
+	verdict=$(echo $line | python3 modules/file_disclosure/check.py $address $web_structure_graph_file_path )
 	# if the script detects a file disclosure
 	if [ $verdict -eq "1" ]
 	then

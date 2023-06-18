@@ -1,16 +1,6 @@
 #!/bin/sh
 
-tmp_log_path="/tmp/logs"
-log_file_path="/var/log/nginx/access.log"
-# divide logs into x seconds windows
-log_window_time=10
-interface_name='enp1s0'
-
-# the acceess sequence file path
-normal_sequences_path="modules/resources/normal_access_patterns"
-
-# the page crawling delay
-sleep_time_between_accesses=2
+source config.conf
 
 crawling_agent_ip4=$(ifconfig $interface_name  | grep inet | head -n 1 |  awk '{print $2}' )
 crawling_agent_ip6=$(ifconfig $interface_name  | grep inet6 | head -n 1 |  awk '{print $2}' )

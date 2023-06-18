@@ -1,18 +1,10 @@
 #!/bin/sh
 
-# de trimis toate post requesturile mai departe
+source config.conf
 
 log_file_path=$1
 
 log_folder_path=$log_file_path-frame
-
-norm_traffic_timeframe_size=2
-
-norm_access_pattern_file="modules/resources/normal_access_patterns"
-
-suspect_traffic_folder_path="/tmp/logs/suspect_traffic"
-
-verdicts_folder_path='/tmp/logs/verdicts'
 
 script_command="analyze"
 
@@ -26,7 +18,7 @@ sh modules/normal_traffic_analyzer/separate_logs_by_ip.sh $log_file_path $log_fo
 # remove the log file
 rm $log_file_path
 # perform the analysis for each ip access
-python3 modules/normal_traffic_analyzer/analyze.py $script_command $log_folder_path $norm_traffic_timeframe_size $norm_access_pattern_file
+python3 modules/normal_traffic_analyzer/analyze.py $script_command $log_folder_path $norm_traffic_timeframe_size $normal_sequences_path
 frame_name=$(basename $log_folder_path)
 suspect_frame_path=$suspect_traffic_folder_path/$frame_name
 # run the other modules if abnormal traffic has been detected
