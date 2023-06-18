@@ -57,4 +57,4 @@ if __name__=="__main__":
 
     verdict_file_path='{}/{}'.format(frame_folder_path,address)
 
-    result=compute_sqli_attempt(file_path,model_path,model_path,vocabulary_path,verdict_file_path,address)
+    result=check_sqli_attempt(file_path,model_path,model_path,vocabulary_path,verdict_file_path,address)
