@@ -2,6 +2,7 @@ import sys
 import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy
+import os
 
 import json
 
