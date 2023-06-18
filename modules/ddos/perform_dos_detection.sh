@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source config.conf
+. ./config.conf
 
 file_path=$1
 norm_traffic_timeframe_size=$2

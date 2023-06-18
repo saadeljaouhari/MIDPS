@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source config.conf
+. ./config.conf
 
 sleeping_duration=$((5*60))
 

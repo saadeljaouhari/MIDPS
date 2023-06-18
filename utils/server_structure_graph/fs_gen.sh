@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source config.conf
+. ./config.conf
 
 # Access log file path
 log_file_path=$1

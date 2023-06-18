@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source config.conf
+. ./config.conf
 
 crawling_agent_ip4=$(ifconfig $interface_name  | grep inet | head -n 1 |  awk '{print $2}' )
 crawling_agent_ip6=$(ifconfig $interface_name  | grep inet6 | head -n 1 |  awk '{print $2}' )

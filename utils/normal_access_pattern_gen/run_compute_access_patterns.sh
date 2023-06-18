@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source config.conf
+. ./config.conf
 
 new_sequences_file_path='utils/normal_access_pattern_gen/normal_access_patterns'
 
