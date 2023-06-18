@@ -82,7 +82,8 @@ def check_request_rate(request_rate_dict,longest_seq_len,ratio_multiplying_facto
     # check if the number of requests surpass the ratio*max_seq_len
     rate_exceeding_threshold=False
     for seq_index in request_rate_dict.keys():
-        if list(request_rate_dict[seq_index].keys())[0]>longest_seq_len*ratio_multiplying_factor:
+        count_value = list(request_rate_dict[seq_index].keys())[0]
+        if count_value>longest_seq_len*ratio_multiplying_factor:
             rate_exceeding_threshold=True
             break
     return rate_exceeding_threshold

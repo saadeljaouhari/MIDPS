@@ -17,7 +17,7 @@ def load_tree(file_name):
 
 def check_file_disclosure(line):
 # in some cases, especially in malware injection the request length is not standard
-    if len(line.split(' ')) != 5:
+    if len(line.split(' ')) == 6:
         resource = line.split(' ')[3]
         referrer = line.split(' ')[5]
 
@@ -30,7 +30,6 @@ def check_file_disclosure(line):
     else:
             #print('{} attempted a file disclosure. The request has an irregular format'.format(address))
             print("1")
-            return True
 
 if __name__=="__main__":
     tree = load_tree(file_name)

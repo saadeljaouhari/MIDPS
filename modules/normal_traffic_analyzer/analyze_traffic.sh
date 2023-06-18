@@ -43,8 +43,7 @@ fi
 
 if [ ! -d $verdicts_folder_path/$frame_name ]
 then
-	echo -n
-	#sh modules/sqli/perform_sqli_check.sh $file
+	sh modules/sqli/perform_sqli_check.sh $file
 fi
 done
 
