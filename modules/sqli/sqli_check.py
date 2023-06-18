@@ -32,8 +32,7 @@ def check_sqli_attempt(file_path,model_path,vocabulary_path,verdict_file_path,ad
             predictions=loaded_model.predict(vectorized_input)
             # if the prediction value is 1 then we have a positive case`
             if predictions[0]==1:
-                with open(verdict_file_path,"a+") as f:
-                    f.write('{} - POSSIBLE SQL INJECTION\n'.format(address))
+
                 sql_attempt=True
                 break
 
@@ -57,4 +56,12 @@ if __name__=="__main__":
 
     verdict_file_path='{}/{}'.format(frame_folder_path,address)
 
-    result=check_sqli_attempt(file_path,model_path,vocabulary_path,verdict_file_path,address)
+    sql_attempt=check_sqli_attempt(file_path,model_path,vocabulary_path,verdict_file_path,address)
+
+    if sql_attempt:
+        if not os.path.exists(frame_folder_path):
+
+            os.makedirs(frame_folder_path)
+
+        with open(verdict_file_path,"a+") as f:
+            f.write('{} - POSSIBLE SQL INJECTION ATTEMPT\n'.format(address))
