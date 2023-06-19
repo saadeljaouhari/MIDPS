@@ -4,7 +4,7 @@ Description=aml
 Type=simple
 User=root
 WorkingDirectory=/root/AlertaML
-ExecStart=tail -F /var/log/nginx/access.log 2/root/AlertaML/ 2>/dev/null | sh /root/AlertaML/capture_traffic.sh
+ExecStart=tail -F /var/log/nginx/access.log 2>/dev/null | sh /root/AlertaML/capture_traffic.sh
 
 [Install]
 WantedBy=multi-user.target
