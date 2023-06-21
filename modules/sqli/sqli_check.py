@@ -6,6 +6,8 @@ import os
 
 import json
 
+# ignore all resource smaller than a given threshold
+query_min_len=20
 
 def check_sqli_attempt(file_path,model_path,vocabulary_path,verdict_file_path,address):
 
@@ -28,6 +30,8 @@ def check_sqli_attempt(file_path,model_path,vocabulary_path,verdict_file_path,ad
         if len(line.split(' '))==6:
             split_line = line.split(' ')
             resource = line.split(' ')[3]
+            if len(resource)<query_min_len:
+                break
             vectorized_input = input_vectorizer.fit_transform([resource]).toarray()
             vectorized_input=vectorized_input.reshape(1,-1)
             predictions=loaded_model.predict(vectorized_input)

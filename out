@@ -1,0 +1,67 @@
+.
+├── aml.service
+├── capture_traffic.sh
+├── config.conf
+├── LICENSE
+├── modules
+│   ├── ddos
+│   │   ├── compute_longest_seq.sh
+│   │   ├── dos_check.py
+│   │   └── perform_dos_detection.sh
+│   ├── file_disclosure
+│   │   ├── check.py
+│   │   └── perform_file_disclosure_detection.sh
+│   ├── normal_traffic_analyzer
+│   │   ├── analyze.py
+│   │   ├── analyze_traffic.sh
+│   │   └── separate_logs_by_ip.sh
+│   ├── resources
+│   │   ├── normal_access_patterns
+│   │   ├── sqli_model.h5
+│   │   ├── sqli_vocabulary.pkl
+│   │   ├── web_page_links
+│   │   ├── web_pages
+│   │   └── web_structure_tree
+│   └── sqli
+│       ├── perform_sqli_check.sh
+│       ├── sqli_check.py
+│       ├── sqli.csv
+│       ├── sqli_model.h5
+│       ├── sql_injection_detection.ipynb
+│       └── sqli_vocabulary.pkl
+├── out
+├── requirements.txt
+└── utils
+    ├── ban_suspicious_activities
+    │   └── apply_ban.sh
+    ├── crawling_agent
+    │   ├── crawling_agent.sh
+    │   ├── run_fs_agent.sh
+    │   └── web_crawl
+    ├── gen_resource_links
+    │   ├── gen_resource_links.sh
+    │   ├── web_page_links
+    │   └── web_pages
+    ├── normal_access_pattern_gen
+    │   ├── compute_patterns.sh
+    │   ├── crawl_logs
+    │   │   └── 1687268963
+    │   │       └── normal_access_logs
+    │   ├── output
+    │   ├── run_compute_access_patterns.sh
+    │   └── run_pattern_agent.sh
+    ├── normal_data_traffic_gen
+    │   ├── gen_traffic.sh
+    │   └── page_output_tmp
+    │       └── music.pseudot.org
+    │           ├── index.html
+    │           └── style.css
+    └── server_structure_graph
+        ├── extract_crawl_data.sh
+        ├── fs_gen.sh
+        ├── parsed_site_data
+        ├── referrer_correlation.py
+        ├── udo2.png
+        └── web_structure_tree
+
+17 directories, 47 files
