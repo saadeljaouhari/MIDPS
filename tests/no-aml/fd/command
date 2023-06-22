@@ -1,0 +1,1 @@
+nikto -Tuning=X -Pause=3 -h blog.pseudot.org

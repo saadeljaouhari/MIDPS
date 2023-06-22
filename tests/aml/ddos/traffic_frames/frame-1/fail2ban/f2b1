@@ -1,0 +1,36 @@
+2023-06-21 12:39:32,920 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 107.181.168.145
+2023-06-21 12:39:32,921 fail2ban.observer       [2832924]: INFO    [aml-jail] IP 107.181.168.145 is bad: 2 # last 2023-06-21 10:24:48 - incr 0:01:00 to 0:04:00
+2023-06-21 12:39:32,923 fail2ban.observer       [2832924]: NOTICE  [aml-jail] Increase Ban 107.181.168.145 (3 # 0:04:00 -> 2023-06-21 12:43:32)
+2023-06-21 12:39:33,008 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 109.191.14.126
+2023-06-21 12:39:33,008 fail2ban.observer       [2832924]: INFO    [aml-jail] IP 109.191.14.126 is bad: 3 # last 2023-06-21 12:25:44 - incr 0:01:00 to 0:08:00
+2023-06-21 12:39:33,010 fail2ban.observer       [2832924]: NOTICE  [aml-jail] Increase Ban 109.191.14.126 (4 # 0:08:00 -> 2023-06-21 12:47:33)
+2023-06-21 12:39:33,102 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 162.253.68.97
+2023-06-21 12:39:33,103 fail2ban.observer       [2832924]: INFO    [aml-jail] IP 162.253.68.97 is bad: 3 # last 2023-06-21 10:31:51 - incr 0:01:00 to 0:08:00
+2023-06-21 12:39:33,104 fail2ban.observer       [2832924]: NOTICE  [aml-jail] Increase Ban 162.253.68.97 (4 # 0:08:00 -> 2023-06-21 12:47:33)
+2023-06-21 12:39:33,197 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 184.178.172.11
+2023-06-21 12:39:33,287 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 184.178.172.28
+2023-06-21 12:39:33,365 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 184.181.217.210
+2023-06-21 12:39:33,454 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 198.8.84.3
+2023-06-21 12:39:33,455 fail2ban.observer       [2832924]: INFO    [aml-jail] IP 198.8.84.3 is bad: 3 # last 2023-06-21 12:24:37 - incr 0:01:00 to 0:08:00
+2023-06-21 12:39:33,456 fail2ban.observer       [2832924]: NOTICE  [aml-jail] Increase Ban 198.8.84.3 (4 # 0:08:00 -> 2023-06-21 12:47:33)
+2023-06-21 12:39:33,539 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 24.249.199.12
+2023-06-21 12:39:33,540 fail2ban.observer       [2832924]: INFO    [aml-jail] IP 24.249.199.12 is bad: 2 # last 2023-06-21 12:34:44 - incr 0:01:00 to 0:04:00
+2023-06-21 12:39:33,542 fail2ban.observer       [2832924]: NOTICE  [aml-jail] Increase Ban 24.249.199.12 (3 # 0:04:00 -> 2023-06-21 12:43:33)
+2023-06-21 12:39:33,630 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 34.150.159.142
+2023-06-21 12:39:33,720 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 5.56.124.176
+2023-06-21 12:39:33,721 fail2ban.observer       [2832924]: INFO    [aml-jail] IP 5.56.124.176 is bad: 1 # last 2023-06-21 10:56:12 - incr 0:01:00 to 0:02:00
+2023-06-21 12:39:33,722 fail2ban.observer       [2832924]: NOTICE  [aml-jail] Increase Ban 5.56.124.176 (2 # 0:02:00 -> 2023-06-21 12:41:33)
+2023-06-21 12:39:33,813 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 72.210.221.223
+2023-06-21 12:39:33,922 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 72.210.252.137
+2023-06-21 12:39:34,007 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 72.217.216.239
+2023-06-21 12:39:34,096 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 72.221.171.130
+2023-06-21 12:39:34,183 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 72.221.232.152
+2023-06-21 12:39:34,184 fail2ban.observer       [2832924]: INFO    [aml-jail] IP 72.221.232.152 is bad: 1 # last 2023-06-21 10:56:12 - incr 0:01:00 to 0:02:00
+2023-06-21 12:39:34,186 fail2ban.observer       [2832924]: NOTICE  [aml-jail] Increase Ban 72.221.232.152 (2 # 0:02:00 -> 2023-06-21 12:41:34)
+2023-06-21 12:39:34,278 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 74.119.144.60
+2023-06-21 12:39:34,374 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 85.143.254.38
+2023-06-21 12:39:34,375 fail2ban.observer       [2832924]: INFO    [aml-jail] IP 85.143.254.38 is bad: 3 # last 2023-06-20 14:25:55 - incr 0:01:00 to 0:08:00
+2023-06-21 12:39:34,375 fail2ban.observer       [2832924]: NOTICE  [aml-jail] Increase Ban 85.143.254.38 (4 # 0:08:00 -> 2023-06-21 12:47:34)
+2023-06-21 12:39:34,476 fail2ban.actions        [2832924]: NOTICE  [aml-jail] Ban 98.178.72.21
+2023-06-21 12:39:34,477 fail2ban.observer       [2832924]: INFO    [aml-jail] IP 98.178.72.21 is bad: 3 # last 2023-06-20 14:25:38 - incr 0:01:00 to 0:08:00
+2023-06-21 12:39:34,479 fail2ban.observer       [2832924]: NOTICE  [aml-jail] Increase Ban 98.178.72.21 (4 # 0:08:00 -> 2023-06-21 12:47:34)

@@ -1,0 +1,23 @@
+
+2023-06-21 12:39:43,326 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 107.181.168.145 already banned
+2023-06-21 12:39:43,408 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 109.191.14.126 already banned
+2023-06-21 12:39:43,475 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 162.253.68.97 already banned
+2023-06-21 12:39:43,544 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 184.178.172.11 already banned
+2023-06-21 12:39:43,619 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 184.178.172.28 already banned
+2023-06-21 12:39:43,701 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 184.181.217.210 already banned
+2023-06-21 12:39:43,776 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 198.8.84.3 already banned
+2023-06-21 12:39:43,854 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 24.249.199.12 already banned
+2023-06-21 12:39:43,930 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 34.150.159.142 already banned
+2023-06-21 12:39:44,001 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 5.56.124.176 already banned
+2023-06-21 12:39:44,075 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 72.210.221.223 already banned
+2023-06-21 12:39:44,145 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 72.210.252.137 already banned
+2023-06-21 12:39:44,214 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 72.217.216.239 already banned
+2023-06-21 12:39:44,284 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 72.221.171.130 already banned
+2023-06-21 12:39:44,370 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 72.221.232.152 already banned
+2023-06-21 12:39:44,459 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 74.119.144.60 already banned
+2023-06-21 12:39:44,556 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 85.143.254.38 already banned
+2023-06-21 12:39:44,640 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 98.178.72.21 already banned
+2023-06-21 12:39:46,905 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 72.221.232.152 already banned
+2023-06-21 12:39:46,995 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 74.119.144.60 already banned
+2023-06-21 12:39:47,067 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 85.143.254.38 already banned
+2023-06-21 12:39:47,145 fail2ban.actions        [2832924]: NOTICE  [aml-jail] 98.178.72.21 already banned
