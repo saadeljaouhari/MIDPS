@@ -1,0 +1,8 @@
+2a05:f480:2800:1cbd:5400:4ff:fe3d:dc98 - - [24/Sep/2023:22:03:01 +0000] "GET /CSS/style.css HTTP/1.1" 200 1157 "https://pseudot.org/" "Wget/1.21"
+2a05:f480:2800:1cbd:5400:4ff:fe3d:dc98 - - [24/Sep/2023:22:03:01 +0000] "GET / HTTP/1.1" 200 6620 "-" "Wget/1.21"
+2a05:f480:2800:1cbd:5400:4ff:fe3d:dc98 - - [24/Sep/2023:22:03:01 +0000] "GET /IMAGES/2019.gif HTTP/1.1" 200 1629 "https://pseudot.org/" "Wget/1.21"
+2a05:f480:2800:1cbd:5400:4ff:fe3d:dc98 - - [24/Sep/2023:22:03:01 +0000] "GET /IMAGES/firefox3.gif HTTP/1.1" 200 3009 "https://pseudot.org/" "Wget/1.21"
+2a05:f480:2800:1cbd:5400:4ff:fe3d:dc98 - - [24/Sep/2023:22:03:01 +0000] "GET /IMAGES/gnubanner.gif HTTP/1.1" 200 2177 "https://pseudot.org/" "Wget/1.21"
+2a05:f480:2800:1cbd:5400:4ff:fe3d:dc98 - - [24/Sep/2023:22:03:01 +0000] "GET /IMAGES/nokia64.gif HTTP/1.1" 200 558 "https://pseudot.org/" "Wget/1.21"
+2a05:f480:2800:1cbd:5400:4ff:fe3d:dc98 - - [24/Sep/2023:22:03:01 +0000] "GET /IMAGES/pepsi.gif HTTP/1.1" 200 3682 "https://pseudot.org/" "Wget/1.21"
+2a05:f480:2800:1cbd:5400:4ff:fe3d:dc98 - - [24/Sep/2023:22:03:01 +0000] "GET /IMAGES/vi.gif HTTP/1.1" 200 5815 "https://pseudot.org/" "Wget/1.21"

@@ -44,7 +44,7 @@ enabled = true
 #filter
 filter=manban
 #initial ban time:
-bantime = 1m
+bantime = 10s
 # incremental banning:
 bantime.increment = true
 # max banning time = 5 weeks:

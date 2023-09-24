@@ -3,6 +3,10 @@ import sys
 import pickle
 import numpy
 import os
+import re
+import collections
+from itertools import groupby
+import math
 
 import json
 
@@ -15,6 +19,7 @@ def check_sqli_attempt(file_path,model_path,verdict_file_path,address):
 
     # load the model from disk
     loaded_model = pickle.load(open(model_path, 'rb'))
+
 
     sql_attempt=False
 
@@ -81,6 +86,7 @@ def G_test_score(count, expected):
             return 2.0 * count * math.log(count/expected)
 
 def G_test(tokens, types):
+    tc_dataframe = vocabulary
     tokens_cnt = tokens.value_counts().astype(float)
     types_cnt = types.value_counts().astype(float)
     total_cnt = float(sum(tokens_cnt))
@@ -94,7 +100,7 @@ def G_test(tokens, types):
     tc_dataframe = pd.DataFrame(list(token_cnt_table.values()), index=token_cnt_table.keys())
     tc_dataframe.fillna(0, inplace=True)
 
-    for column in tc_dataframe.columns.tolist():
+    for column in vocabulary.columns.tolist():
 
         if column == 0:
             root_name = "plain"
@@ -107,7 +113,7 @@ def G_test(tokens, types):
 
 def G_means(token_seq, c_name):
     try:
-        g_scores = [tc_dataframe.loc[token][c_name] for token in token_seq]
+        g_scores = [vocabulary.loc[token][c_name] for token in token_seq]
     except KeyError:
         return 0
     return sum(g_scores)/len(g_scores) if g_scores else 0
@@ -120,6 +126,12 @@ if __name__=="__main__":
     file_path=sys.argv[1]
 
     model_path = sys.argv[2]
+
+    vocabulary_path = sys.argv[3]
+
+
+    # load the vocabulary from disk
+    vocabulary = pickle.load(open(vocabulary_path, 'rb'))
 
     verdict_folder_path='/tmp/logs/verdicts'
 

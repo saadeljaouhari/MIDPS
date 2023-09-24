@@ -35,10 +35,10 @@ for file in "$suspect_frame_path"/*; do
 		sh modules/sqli/perform_sqli_check.sh $file
 	fi
 	# Before running a module, we check if the previous one has detected anomalies
-	if [ ! -f $verdicts_folder_path/$frame_name/$file_name ]
-	then
-		sh modules/file_disclosure/perform_file_disclosure_detection.sh $file
-	fi
+#	if [ ! -f $verdicts_folder_path/$frame_name/$file_name ]
+#	then
+#		sh modules/file_disclosure/perform_file_disclosure_detection.sh $file
+#	fi
 
 
 done
