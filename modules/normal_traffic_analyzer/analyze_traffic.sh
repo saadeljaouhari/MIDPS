@@ -27,19 +27,19 @@ then
 # We run each module sequentially
 for file in "$suspect_frame_path"/*; do
 	file_name=$(basename $file)
-	sh modules/ddos/perform_dos_detection.sh $file $norm_traffic_timeframe_size
+	#sh modules/ddos/perform_dos_detection.sh $file $norm_traffic_timeframe_size
 
-# Before running a module, we check if the previous one has detected anomalies
-if [ ! -f $verdicts_folder_path/$frame_name/$file_name ]
-then
-	sh modules/file_disclosure/perform_file_disclosure_detection.sh $file
-fi
+	# Before running a module, we check if the previous one has detected anomalies
+	if [ ! -f $verdicts_folder_path/$frame_name/$file_name ]
+	then
+		sh modules/sqli/perform_sqli_check.sh $file
+	fi
+	# Before running a module, we check if the previous one has detected anomalies
+	if [ ! -f $verdicts_folder_path/$frame_name/$file_name ]
+	then
+		sh modules/file_disclosure/perform_file_disclosure_detection.sh $file
+	fi
 
-# Before running a module, we check if the previous one has detected anomalies
-if [ ! -f $verdicts_folder_path/$frame_name/$file_name ]
-then
-	sh modules/sqli/perform_sqli_check.sh $file
-fi
 
 done
 
